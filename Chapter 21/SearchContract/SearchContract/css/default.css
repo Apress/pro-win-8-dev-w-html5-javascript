@@ -1,0 +1,47 @@
+﻿body {
+    background-color: #5A8463;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+}
+
+.listContainer {
+    height: 80%;
+    margin: 10px;
+    border: medium solid white;
+    padding: 10px;
+}
+
+#nameContainer {
+    width: 50%;
+}
+
+#messageContainer {
+    width: 25%;
+}
+   
+#nameList, #messageList {
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+*.ListData, .message {
+    background-color: black;
+    text-align: center;
+    border: solid medium white;
+    font-size: 20pt;    
+    padding: 10px;
+    width: 140px;
+}
+
+.message {
+    width: 95%; 
+    font-size: 18pt;
+    padding: 5px;
+}
+
+#buttonContainer > button {
+    font-size: 20pt;
+    margin: 10px;
+}

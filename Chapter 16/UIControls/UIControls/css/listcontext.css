@@ -1,0 +1,50 @@
+﻿#contextContainer {
+    height: 100%;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;    
+}
+
+#contextContainer div[data-win-control="WinJS.UI.ListView"] {
+    border: thick solid white;
+    height: 650px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#zoomedOut {
+    width: 200px;
+}
+
+#zoomedIn {
+    width: 900px;
+    padding: 20px;
+}
+
+*.contextListItem {
+    width: 170px;
+}
+
+*.contextListData {
+    background-color: black;
+    text-align: center;
+    border: solid medium white;
+    font-size: 20pt;
+}
+
+*.highlighted {
+    color: #4cff00;
+    font-weight: bold;
+}
+
+*.notHighlighted {
+    color: white;
+    font-weight: normal;    
+    -ms-transition-delay: 100ms;
+    -ms-transition-duration: 500ms;
+}
+
+#zoomedIn .win-goupheader {
+    display: none;
+}

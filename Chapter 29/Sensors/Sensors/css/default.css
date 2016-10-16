@@ -1,0 +1,45 @@
+﻿body {display: -ms-flexbox; -ms-flex-direction: column;
+    -ms-flex-align: stretch; -ms-flex-pack: center;    }
+
+#contentTarget {
+    display: -ms-flexbox; -ms-flex-direction: row;
+    -ms-flex-align: stretch; -ms-flex-pack: center;
+    }
+
+.container {
+    border: medium solid white;
+    margin: 10px; padding: 10px;
+}
+.containerHeader {
+    text-align: center;
+}
+
+#buttonsContainer button {
+    font-size: 20pt;
+    margin: 20pt;
+    display: block;
+    width: 80%;
+}
+
+*.imgElem {height: 500px;}
+
+*.imgTitle { color: white; background-color: black;
+    font-size: 30pt; padding-left: 10px;}
+
+.messageItem {
+    display: block; font-size: 20pt;
+    width: 100%; margin-top: 10px;
+}
+
+
+#messageContainer {
+    width: 60%;
+}
+
+.messageList {
+    height: 80vh;
+}
+
+.label { margin: 20px; width: 600px;}
+.label span { display: inline-block; width: 250px; text-align: right;}
+h1.warning { display: none; text-align: center;}

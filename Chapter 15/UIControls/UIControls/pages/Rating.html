@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .win-rating .win-star.win-user.win-full {
+            color: yellow;
+        }
+        .win-rating .win-star.win-average.win-full {
+            color:  #000;
+        }
+        .win-rating .win-star.win-average.win-full, 
+        .win-rating .win-star.win-tentative.win-full {
+            color:  white;
+        }             
+    </style>
+    <script>
+        WinJS.UI.Pages.define("/pages/Rating.html", {
+            ready: function () {
+                Templates.createControls(rightPanel, rating, "rating")
+                .then(function () {
+                    rating.winControl.tooltipStrings = ["Terrible", "Pretty Bad", "Not So Good",
+                        "Reasonable", "Good", "Excellent"];
+
+                    rating.addEventListener("change", function () {
+                        userRating.value = rating.winControl.userRating;
+                    });
+
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="ratingContainer" class="flexContainer">
+
+        <div class="controlPanel">
+            <div id="rating" data-win-control="WinJS.UI.Rating"></div>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+</body>
+</html>

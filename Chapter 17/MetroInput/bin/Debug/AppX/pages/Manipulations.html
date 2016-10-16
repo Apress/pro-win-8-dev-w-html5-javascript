@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/Manipulations.html", {
+            ready: function () {
+                var eventTypes = ["MSPointerDown", "MSGestureStart",
+                    "MSGestureEnd", "MSGestureChange"];
+
+                function handleGestureEvent(e) {
+                    if (e.type == "MSPointerDown") {
+                        gestures[e.target.id].addPointer(e.pointerId);
+                    } else {
+                        e.target.style.transform = filterGesture(e);
+                    }
+                }
+
+                function filterGesture(e) {
+                    var matrix = new MSCSSMatrix(e.target.style.transform);
+                    switch (e.target.id) {
+                        case "rotate":
+                            return matrix.rotate(e.rotation * 180 / Math.PI);
+                            break;
+                        case "scale":
+                            return matrix.scale(e.scale);
+                            break;
+                        case "pan":
+                            return matrix.translate(e.translationX, e.translationY)
+                            break;
+                    };
+                }
+
+                var ids = ["rotate", "scale", "pan"];
+                var elems = [];
+                var gestures = [];
+
+                ids.forEach(function (id) {
+                    elems[id] = document.getElementById(id);
+                    gestures[id] = new MSGesture();
+                    gestures[id].target = elems[id];
+                    eventTypes.forEach(function (eventType) {
+                        elems[id].addEventListener(eventType, handleGestureEvent);
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="pointerEventsContainer" class="container">
+        <div class="panel">
+            <div id="rotate" class="coloredRect">Rotate</div>
+        </div>
+        <div class="panel">
+            <div id="scale" class="coloredRect">Scale</div>
+        </div>
+        <div class="panel">
+            <div id="pan" class="coloredRect">Pan</div>
+        </div>
+    </div>
+</body>
+</html>

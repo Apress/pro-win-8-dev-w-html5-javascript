@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            WinJS.UI.Pages.define("customNavBar.html", {
+                ready: function (element, title) {
+
+                    ViewModel.State.navBarControlElement = navbar;
+
+                    document.getElementById("navBarTitle").innerText = title;
+                    document.getElementById("navBarBack").addEventListener("click",
+                        function () {
+                            WinJS.Navigation.back();
+                        });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="navbar" data-win-control="WinJS.UI.AppBar"
+            data-win-options="{placement:'top', layout:'custom'}">
+            <div id="navBarContent">
+                <button id="navBarBack" class="win-backbutton"></button>
+                <h1 id="navBarTitle">Page Title</h1>
+            </div>
+        </div>
+    </body>
+</html>

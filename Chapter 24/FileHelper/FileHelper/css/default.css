@@ -1,0 +1,5 @@
+﻿body, div.container {display: -ms-flexbox;-ms-flex-direction: row;
+    -ms-flex-align: center; -ms-flex-pack: center; }
+div.container {margin: 10px; height: 80%; -ms-flex-direction: column;}
+button {font-size: 25pt; width: 200px; margin: 10px;}
+#thumbnail {width: 600px; border: medium white solid;}

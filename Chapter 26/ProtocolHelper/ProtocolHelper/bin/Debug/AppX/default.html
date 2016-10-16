@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ProtocolHelper</title>
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <style type="text/css">
+        body { display: -ms-flexbox; -ms-flex-direction: column;
+            -ms-flex-align: center; -ms-flex-pack: center}          
+        body > * { margin: 20px; width: 60%}
+        #linkElem { display: block; font-size: 30pt;
+            text-align: center; color: white;}
+    </style>
+    <script>
+        var storage = Windows.Storage;
+        storage.KnownFolders.picturesLibrary
+            .getFilesAsync(storage.Search.CommonFileQuery.orderByName)
+            .then(function (files) {
+                files[0].getThumbnailAsync(storage.FileProperties.
+                        ThumbnailMode.singleItem, 500).then(function (thumb) {
+                            imgElem.src = URL.createObjectURL(thumb);
+                            linkElem.href = "photoalbum:" + files[0].path;
+                        });
+            });
+    </script>
+</head>
+<body>
+    <img id="imgElem" />
+    <a id="linkElem">Protocol Link</a>
+</body>
+</html>

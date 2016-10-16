@@ -1,0 +1,43 @@
+﻿header {
+    margin: 20px;
+}
+
+h1.subhead {
+    font-size: 30pt;
+    margin: 10px;
+}
+
+#backButtonContainer {
+    width: 100%;
+    padding: 20px;
+}
+
+#backButton {
+    margin-left: 20px;
+}
+
+#flashContainer {
+    display: -ms-flexbox; 
+    -ms-flex-direction: column;
+    -ms-flex-align: center; 
+    -ms-flex-pack: justify;  
+    height: 100%;
+}
+
+#noteButtons {
+    margin-bottom: 50px;
+}
+
+#noteButtons button {
+    font-size: 30pt;
+    margin: 5px;
+}
+
+button.correct {
+    background-color: #4cff00;
+}
+
+#noteButtons button[id] {
+    width: 200px;
+}
+

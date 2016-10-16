@@ -1,0 +1,8 @@
+﻿#flip { width: 400px; height: 400px }  
+.flipItem img { height: 400px }
+.flipTitle { position: absolute; color: black;
+    bottom: 2px; font-size: 30pt; width: 100%;
+    padding: 10px; background-color: rgba(255, 255, 255, 0.6)}
+.renderDiv { border: thick solid white; height: 200px}
+.renderDiv img { height: 200px; width: 200px }
+.renderDiv div { text-align: center; font-size: 30pt }

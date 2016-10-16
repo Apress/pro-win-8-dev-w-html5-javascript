@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/css/listview.css" rel="stylesheet">
+    <script src="/js/pages/listview.js"></script>
+    <style>
+        .groupHead {border: thin solid white;background-color: black;
+            color: white;padding: 5px;font-weight: bold;}
+        .win-selectioncheckmark {
+            color: red;
+            font-size: 20pt;
+        }
+    </style>
+</head>
+<body>
+    <div id="ItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="listItem">
+            <div class="listData" data-win-bind="innerText: letter"></div>
+            <div class="listTitle" data-win-bind="innerText: group"></div>
+        </div>
+    </div>
+
+    <div id="GroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="groupHead" data-win-bind="innerText: title"></div>
+    </div>
+    
+    <div id="listViewContainer" class="flexContainer">
+        <div class="controlPanel">
+            <div id="list" data-win-control="WinJS.UI.ListView"
+                data-win-options="{ itemTemplate: ItemTemplate,
+                    groupHeaderTemplate: GroupHeaderTemplate,
+                    itemDataSource: ViewModel.data.letters.dataSource}">
+            </div>
+        </div>
+
+        <div id="midPanel" class="controlPanel"></div>
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+</body>
+</html>

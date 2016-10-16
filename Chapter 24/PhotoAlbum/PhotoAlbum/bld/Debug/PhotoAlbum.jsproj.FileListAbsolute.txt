@@ -1,0 +1,13 @@
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bin\Debug\resources.pri
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bin\Debug\AppxManifest.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bin\Debug\PhotoAlbum.build.appxrecipe
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\priconfig.xml.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\layout.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\resources.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\pri.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\priconfig.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\layout.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\resources.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\pri.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\LanguageQualifiers.txt
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 24\PhotoAlbum\PhotoAlbum\bld\Debug\ProjectArchitectures.txt

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TINY</Machine>
+    <WindowsUser>adam</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>E7C55936EE37C1EC85ADC6761F9A1D7E69D4A9D9D46D024AE51FF930E862A879</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>2d09309b-179a-4199-85c4-7d21daba27dd_1.0.0.0_neutral__6fxp0bkxjs8ye</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>2d09309b-179a-4199-85c4-7d21daba27dd_6fxp0bkxjs8ye!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>2d09309b-179a-4199-85c4-7d21daba27dd</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=adam</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-22T11:49:02.547</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\contentButton.html">
+      <PackagePath>contentButton.html</PackagePath>
+      <Modified>2012-06-02T17:36:29.202</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\contentBasic.html">
+      <PackagePath>contentBasic.html</PackagePath>
+      <Modified>2012-06-02T17:37:39.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-08-22T11:49:02.166</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-02-14T03:25:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-02-14T03:25:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-02-14T03:25:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-02-14T03:25:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-04-20T10:32:00.400</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-06-02T17:36:06.330</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 05\SinglePageNav\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-04-20T12:17:11.503</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.8514.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

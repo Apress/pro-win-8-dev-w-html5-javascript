@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/AppTest.html", {
+            ready: function () {
+
+                var proxyObject = WinJS.Binding.as({
+                    theme: "Big"
+                });
+
+                Templates.createControls(rightPanel, inputElem, "apptest", proxyObject);
+
+                proxyObject.bind("theme", function (val) {
+                    inputElem.style.fontSize = val == "Big" ? "25pt" : "";
+                    inputElem.style.fontWeight = val == "Big" ? "bold" : "";
+                    
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="flexContainer">
+
+        <div class="controlPanel">
+            <input id="inputElem"/>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+</body>
+</html>

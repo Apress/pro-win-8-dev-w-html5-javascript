@@ -1,0 +1,19 @@
+﻿body {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;    
+}
+
+#container {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;
+}
+
+#container button {
+    font-size: 30pt;
+    width: 400px;
+    margin: 10px;
+}

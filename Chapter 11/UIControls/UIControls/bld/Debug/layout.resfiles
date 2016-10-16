@@ -1,0 +1,15 @@
+css\default.css
+default.html
+images\apple.png
+images\logo.png
+images\smalllogo.png
+images\splashscreen.png
+images\storelogo.png
+js\controls.js
+js\default.js
+js\templates.js
+js\viewmodel.js
+pages\AppTest.html
+pages\Rating.html
+pages\ToggleSwitch.html
+pages\Tooltip.html

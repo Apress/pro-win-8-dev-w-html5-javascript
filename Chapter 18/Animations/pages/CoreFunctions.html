@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/css/cssTransitions.css" rel="stylesheet">
+    <script>
+        var transforms = ["", "translateX(100px) rotate(45deg)",
+            "translateY(50px) scale(1.2)"];
+        var durations = [500, 1000, 250];
+        var colors = ["black", "red", "yellow"];
+
+        WinJS.UI.Pages.define("/pages/CoreFunctions.html", {
+            ready: function () {
+                $("div.coloredRect").listen("click", function (e) {
+                    switch (e.target.id) {
+                        case "transitionTarget":
+                            WinJS.UI.executeAnimation(e.target, [{
+                                property: "background-color", to: "white",
+                                duration: 5000, delay: 0,
+                                timing: "ease"
+                            }, {
+                                property: "color", to: "black",
+                                duration: 5000, delay: 0, timing: "ease"
+                            }]) .then(function () {
+                                return WinJS.UI.executeAnimation(e.target, {
+                                    property: "font-size", to: "50pt",
+                                    duration: 5000, delay: 0, timing: "ease"
+                                });
+                            });
+                            break;
+                        case "transformTarget":
+                            var curr = e.target.style.transform;
+                            var index = (transforms.indexOf(curr) + 1) % 3;
+                            
+                            WinJS.UI.executeTransition(e.target, [
+                                { property: "transform",
+                                    to: transforms[index], duration: durations[index],
+                                    delay: 0, timing: "ease"
+                                }, { property: "background-color",
+                                    to: colors[index], duration: durations[index],
+                                    delay: 0, timing: "ease"}
+                            ]);
+                            break;
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="outerContainer">
+        <div class="panel">
+            <div id="transitionTarget" class="coloredRect column">Transition</div>
+        </div>
+        <div class="panel">
+            <div id="transformTarget" class="coloredRect column">Transform</div>
+        </div>
+    </div>
+</body>
+</html>

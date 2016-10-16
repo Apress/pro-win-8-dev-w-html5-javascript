@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var input = Windows.Devices.Input;
+        var eventList = new WinJS.Binding.List();
+
+        var holdConverter = WinJS.Binding.converter(function (detail) {
+            if (detail == MSGestureEvent.MSGESTURE_FLAG_BEGIN) {
+                return "Start";
+            } else if (detail == MSGestureEvent.MSGESTURE_FLAG_END) {
+                return "End";
+            } else if (detail == MSGestureEvent.MSGESTURE_FLAG_CANCEL) {
+                return "Cancel";
+            } else {
+                return "";
+            }
+        });
+
+        WinJS.UI.Pages.define("/pages/Gestures.html", {
+            ready: function () {
+
+                var eventTypes = ["MSPointerDown", "MSGestureTap", "MSGestureHold"];
+
+                var ges = new MSGesture();
+                ges.target = targetElem;
+
+                eventTypes.forEach(function (eventType) {
+                    targetElem.addEventListener(eventType, function (e) {
+                        if (e.type == "MSPointerDown") {
+                            ges.addPointer(e.pointerId);
+                        } else {
+                            eventList.unshift(e);
+                        }
+                    }, false);
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="eventDisplayTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="eventDisplay">
+            <div class="eventDetail" data-win-bind="innerText: type"></div>
+            <div class="primaryDetail" data-win-bind="innerText: detail holdConverter"></div>
+        </div>
+    </div>
+    <div id="pointerEventsContainer" class="container">
+        <div id="sourceElements" class="panel">
+            <div id="targetElem" class="coloredRect">
+                Gestures
+            </div>
+        </div>
+        <div id="eventListContainer" class="panel">
+            <div id="eventList" data-win-control="WinJS.UI.ListView"
+                data-win-options="{
+                    itemTemplate: eventDisplayTemplate,
+                    layout: {type: WinJS.UI.ListLayout},
+                    itemDataSource: eventList.dataSource,
+                }">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

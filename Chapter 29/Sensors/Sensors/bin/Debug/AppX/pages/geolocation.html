@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/pages/geolocation.js"></script>
+</head>
+<body>
+    <div id="template" data-win-control="WinJS.Binding.Template">
+        <div class="messageItem" data-win-bind="innerText: message"></div>
+    </div>
+
+    <div id="buttonsContainer" class="container">
+        <button>Get Location</button>
+        <button id="start">Start Tracking</button>
+        <button id="stop" disabled>Stop Tracking</button>
+    </div>
+
+    <div id="messageContainer" class="container">
+        <h1 class="containerHeader">Messages</h1>
+        <hr />
+        <div id="messageList" class="messageList" data-win-control="WinJS.UI.ListView" 
+            data-win-options="{ itemTemplate: template, 
+                layout: {type: WinJS.UI.ListLayout}}">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿#gridContainer {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    height: 100%;
+    font-size: 40pt;
+}
+
+#gridContainer > div {
+    border: medium solid white;
+    padding: 10px; margin: 1px;
+}
+
+#topLeft {
+    -ms-grid-row: 1; -ms-grid-column: 1;
+    background-color: #317f42;
+}
+
+#topRight {
+    -ms-grid-row: 1; -ms-grid-column: 2;
+    background-color: #5A8463;
+}
+
+#bottomLeft {
+    -ms-grid-row: 2; -ms-grid-column: 1;
+    background-color: #4ecc69;    
+}
+
+#bottomRight {
+    -ms-grid-row: 2; -ms-grid-column: 2;
+    background-color: #46B75E;
+}
+
+span, button, img {
+    font-size: 25pt;
+    margin: 5px;
+    display: block;
+}
+
+#testImg {
+    width: 100px;
+    height: 100px;
+}

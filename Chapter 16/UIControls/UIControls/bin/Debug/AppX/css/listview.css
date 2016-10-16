@@ -1,0 +1,12 @@
+﻿#list {width:  500px;height: 500px;}
+*.listItem {width: 100px;}
+*.listData {background-color: black;
+    text-align: center; border: solid medium white;font-size: 70pt;}
+.listTitle {position: absolute; background-color: rgba(255, 255, 255, 0.6);
+    color: black; bottom: 3px;font-size: 20pt; width: 86px;
+    padding-left: 10px; padding-top: 20px;font-weight: bold;}
+*.invoked {color: red;}
+*.invoked .listData {font-weight: bold;}
+*.invoked .listTitle {background-color: transparent}
+#midPanel, #rightPanel { -ms-flex-pack: start;  }
+#list .win-container {background-color: transparent;}

@@ -1,0 +1,13 @@
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bin\Debug\resources.pri
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bin\Debug\AppxManifest.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bin\Debug\AppViews.build.appxrecipe
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\priconfig.xml.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\layout.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\resources.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\pri.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\priconfig.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\layout.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\resources.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\pri.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\LanguageQualifiers.txt
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 06\AppViews\AppViews\bld\Debug\ProjectArchitectures.txt

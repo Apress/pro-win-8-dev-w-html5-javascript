@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>UIControls</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- UIControls references -->
+    <link href="/css/default.css" rel="stylesheet">
+    <script src="/js/viewmodel.js"></script>
+    <script src="/js/templates.js"></script>
+    <script src="/js/controls.js"></script>
+    <script src="/js/default.js"></script>
+
+</head>
+<body>
+
+    <div id="navBarCommandTemplate" data-win-control="WinJS.Binding.Template">
+        <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{section:'selection'}" 
+            data-win-bind="winControl.label: name; winControl.icon: icon">
+        </button>  
+    </div>
+
+    <div id="selectTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="selectContainer">
+            <h2 class="controlTitle" data-win-bind="innerText: title"></h2>
+            <select class="controlSelect"></select>
+        </div>
+    </div>
+
+    <div id="inputTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="inputContainer">
+            <h2 class="controlTitle" data-win-bind="innerText: title"></h2>
+            <input class="controlInput" data-win-bind="value: value"/>
+        </div>
+    </div>
+
+    <div id="spanTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="spanContainer">
+            <h2 class="controlTitle" data-win-bind="innerText: title"></h2>
+            <span class="controlSpan" data-win-bind="innerText: value"></span>
+        </div>
+    </div>
+
+    <div id="toggleSwitchTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-control="WinJS.UI.ToggleSwitch"
+            data-win-bind="winControl.checked: value; winControl.title: title">
+        </div>
+    </div>
+
+    <div id="contentTarget">
+        <h1 class="message">Select a Control from the NavBar</h1>
+    </div>
+
+    <div id="navbar" data-win-control="WinJS.UI.AppBar" 
+        data-win-options="{placement:'top'}"></div>
+</body>
+</html>

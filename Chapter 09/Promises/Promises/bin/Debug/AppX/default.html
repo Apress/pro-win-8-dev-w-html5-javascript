@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Promises</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- Promises references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/viewmodel.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="left" class="panel">
+            <div>
+                <label>1st Zip:</label>
+                <input id="zip1" data-win-bind="value: State.zip1" />
+            </div>
+            <div>
+                <label>2nd Zip:</label>
+                <input id="zip2" data-win-bind="value: State.zip2" />
+            </div>
+            <div>
+                <button id="go">Go</button>
+                <button id="cancel">Cancel</button>
+            </div>
+            <div id="messages"></div>
+        </div>
+        <div id="middle" class="panel">Content will go here</div>
+        <div id="right" class="panel">Content will go here</div>
+    </div>
+
+    <div id="messageTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="message" data-win-bind="innerText: message"></div>
+    </div>
+
+    <div id="zipTemplate" data-win-control="WinJS.Binding.Template">
+        <div><label>Zip:</label><span data-win-bind="innerText: Zipcode"></span></div>        
+        <div><label>City:</label><span data-win-bind="innerText: City"></span></div>        
+        <div><label>State:</label><span data-win-bind="innerText: State"></span></div>        
+        <div><label>Lat:</label><span data-win-bind="innerText: Latitude"></span></div>        
+        <div><label>Lon:</label><span data-win-bind="innerText: Longitude"></span></div>        
+    </div>
+</body>
+</html>

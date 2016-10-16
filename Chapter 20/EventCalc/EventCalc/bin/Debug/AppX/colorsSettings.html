@@ -1,0 +1,43 @@
+﻿<!doctype HTML>
+<html>
+<head>
+    <title></title>
+    <style>
+        #colorsDiv #backbutton { color: white; border-color: white;}
+        #colorsDiv div.win-header { color: white; background-color: #004d60;}
+    </style>
+    <script>
+        WinJS.UI.Pages.define("colorsSettings.html", {
+            ready: function () {
+                WinJS.Utilities.query("#colorsDiv input").listen("change", function (e) {
+                    ViewModel.Settings.backgroundColor = backgroundColorInput.value;
+                    ViewModel.Settings.textColor = textColorInput.value;
+                });
+                backbutton.addEventListener("click", function () {
+                    WinJS.UI.SettingsFlyout.show();
+                });
+                WinJS.Binding.processAll(colorsDiv, ViewModel.Settings);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="colorsDiv" data-win-control="WinJS.UI.SettingsFlyout" 
+        data-win-options="{width:'narrow'}">
+        <div class="win-header">
+            <button id="backbutton" class="win-backbutton"></button>
+            <div class="win-label">Colors</div>
+        </div>
+        <div class="win-content">
+            <div>
+                <h2>Background Color</h2>
+                <input id="backgroundColorInput" data-win-bind="value:backgroundColor" />
+            </div>
+            <div>
+                <h2>Text Color</h2>
+                <input id="textColorInput" data-win-bind="value:textColor" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

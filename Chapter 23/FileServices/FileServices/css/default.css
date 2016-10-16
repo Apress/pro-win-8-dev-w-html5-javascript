@@ -1,0 +1,19 @@
+﻿body {display: -ms-flexbox; -ms-flex-direction: column;
+    -ms-flex-align: center; -ms-flex-pack: center;    }
+
+#contentTarget {
+    display: -ms-flexbox; -ms-flex-direction: row;
+    -ms-flex-align: center; -ms-flex-pack: center;
+    text-align: center;}
+
+.container {
+    border: medium solid white;
+    margin: 10px; padding: 10px;}
+
+.container button {font-size: 25pt; margin: 10px;
+    display: block; width: 300px;}
+
+*.imgElem {height: 500px;}
+
+*.imgTitle { color: white; background-color: black;
+    font-size: 30pt; padding-left: 10px;}

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #saveListView { width: 75%; height: 275px;}
+    </style>
+    <script>
+        var storage = Windows.Storage;
+        WinJS.UI.Pages.define("/pages/savePickerView.html", {
+            ready: function (element, pickerUI) {
+                pickerUI.title = "Save to Photo Album";
+                pickerUI.addEventListener("targetfilerequested", function (e) {
+                    var deferral = e.request.getDeferral();
+                    storage.ApplicationData.current.localFolder
+                        .createFileAsync(pickerUI.fileName,
+                            storage.CreationCollisionOption.replaceExisting)
+                            .then(function (file) {
+                                e.request.targetFile = file;
+                                App.processFile(file);
+                                deferral.complete();
+                            });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="title">Add to the 
+        <span class="title" data-win-bind="innerText: fileList.length"></span>
+         images in your album</div>
+    <div id="saveListView" data-win-control="WinJS.UI.ListView" 
+        data-win-options="{
+            itemTemplate: imageTemplate,
+            itemDataSource: ViewModel.fileList.dataSource,
+            maxRows: 1
+        }">
+    </div>
+</body>
+</html>

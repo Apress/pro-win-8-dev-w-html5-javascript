@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/albumView.html", {
+            ready: function () {
+                WinJS.Utilities.query("button").listen("click", function (e) {
+                    if (this.id == "openButton") {
+                        App.pickFiles();
+                    } else {
+                        App.clearCache();
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="listView" data-win-control="WinJS.UI.ListView" 
+        data-win-options="{itemTemplate: imageTemplate,
+            itemDataSource: ViewModel.fileList.dataSource}">
+    </div>
+    <div id="buttonContainer">
+        <button id="openButton">Open</button>
+        <button id="clearButton">Clear</button>
+    </div>
+</body>
+</html>

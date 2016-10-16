@@ -1,0 +1,13 @@
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bin\Debug\resources.pri
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bin\Debug\AppxManifest.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bin\Debug\CustomPromise.build.appxrecipe
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\priconfig.xml.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\layout.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\resources.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\pri.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\priconfig.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\layout.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\resources.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\pri.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\LanguageQualifiers.txt
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 09\CustomPromise\CustomPromise\bld\Debug\ProjectArchitectures.txt

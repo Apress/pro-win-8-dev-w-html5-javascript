@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style> #showButton {font-size: 20pt}
+</style>
+<script>
+    var winpop = Windows.UI.Popups;
+
+    var loremipsum = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, "
+        + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris "
+        + "nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in "
+        + "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla "
+        + "pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "
+        + " culpa qui officia deserunt mollit anim id est laborum.";
+
+    WinJS.UI.Pages.define("/pages/MessageDialog.html", {
+        ready: function () {
+
+            var proxyObject = WinJS.Binding.as({
+                delay: false,
+                title: true,
+                addcommands: true,
+            });
+
+            Templates.createControls(rightPanel, showButton, "messagedialog",
+                proxyObject).then(function () {
+  
+                showButton.addEventListener("click", function (e) {
+
+                    var md = new winpop.MessageDialog(loremipsum);
+                    if (proxyObject.title) {
+                        md.title = "Caution";
+                    }
+                    if (proxyObject.delay) {
+                        md.options
+                            = winpop.MessageDialogOptions.acceptUserInputAfterDelay;
+                    }
+
+                    if (proxyObject.addcommands) {
+                        ["Yes", "No", "Help"].forEach(function (text) {
+                            md.commands.append(new winpop.UICommand(text));
+                        });
+                        md.defaultCommandIndex = 0;
+                        md.cancelCommandIndex = 1;
+                    }
+
+                    md.showAsync().then(function (command) {
+                        commandSpan.innerText = command.label;
+                    });
+                });
+            });
+        }
+    });
+</script>
+</head>
+<body>
+    <div id="ratingContainer" class="flexContainer">
+
+        <div class="controlPanel">
+            <button id="showButton">Show MessageDialog</button>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+</body>
+</html>

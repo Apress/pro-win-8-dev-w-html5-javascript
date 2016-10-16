@@ -1,0 +1,18 @@
+﻿#contentTarget {
+    width: 100%; height: 100%;
+    display: -ms-flexbox; -ms-flex-direction: column;
+    -ms-flex-align: center; -ms-flex-pack: center;}
+
+#listView { border: medium solid white; margin: 10px;
+    height: 80%; width: 80%; padding: 20px;}
+
+#buttonContainer button { font-size: 20pt; width: 100px;}
+
+.imgContainer { border: thin solid white; padding: 2px;}
+
+.listTitle { font-size: 18pt; max-width: 180px; 
+    text-overflow: ellipsis; display: block; white-space: nowrap; 
+    margin: 0 0 5px 5px; height: 35px;}
+
+.listImg {height: 200px; width: 300px;}
+.title { font-size: 30pt;}

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("page2.html", {
+            ready: function () {
+                WinJS.UI.Pages.render("customNavBar.html",
+                    ViewModel.State.navBarContainerElement, "Page 2");
+
+                wordbutton.addEventListener("click", function (e) {
+                    ViewModel.UserData.word = wordinput.value;
+                });
+
+                ViewModel.UserData.wordList.addEventListener("iteminserted", function (e) {
+                    wordTemplate.winControl.render({ wordValue: e.detail.value }, wordList);
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="wordTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="word" data-win-bind="innerText: wordValue"></div>
+    </div>
+
+    <div id="page2Container" class="container">
+        <h1>This is Page 2</h1>
+
+        <div id="page2BoxContainer">
+            <div id="p2left" class="page2box">
+                <input id="wordinput" placeholder="Enter a word">
+                <button id="wordbutton">OK</button>
+            </div>
+
+        <div id="p2middle" class="page2box">
+            <span>The word is:</span>
+            <span id="wordspan"
+                data-win-bind="innerText: UserData.word ViewModel.Converters.defaultStringIfNull">????</span>
+        </div>
+
+        <div id="p2right" class="page2box">
+            <span>The length is:</span>
+            <span id="lengthspan" 
+                data-win-bind="innerText: UserData.wordLength ViewModel.Converters.defaultStringIfNull">????</span>
+        </div>
+        </div>
+
+        <div id="wordListContainer" class="page2box">
+            <span>Word List:</span>
+            <div id="wordList"></div>
+        </div>
+    </div>
+</body>
+</html>

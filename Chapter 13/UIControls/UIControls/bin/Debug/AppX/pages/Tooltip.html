@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #tooltipContent img { float: left; }   
+        #blockTooltip button { font-size: 18pt; margin: 10px;}             
+    </style>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/Tooltip.html", {
+            ready: function () {
+
+                Templates.createControls(rightPanel, inlineTooltip, "tooltip");
+
+                $("#rightPanel button").listen("click", function (e) {
+                    inlineTooltip.winControl[e.target.innerText.toLowerCase()]();
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="tooltipContainer" class="flexContainer">
+        <div class="controlPanel">
+            <div class="textPara">I like 
+                <span id="inlineTooltip" data-win-control="WinJS.UI.Tooltip"
+                    data-win-options="{innerHTML: 'An Apple is a type of Fruit'}">
+                    <b>Apples</b>
+                </span>, but I don't like Pears.</div>
+            
+            <div id="blockTooltip" data-win-control="WinJS.UI.Tooltip"
+                data-win-options="{contentElement: tooltipContent, infotip: true}">
+                <button>Press Me</button>
+            </div>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+
+    <div style="display: none">
+        <div id="tooltipContent">
+            <img src="/images/apple.png" />
+            <span>Apples grow on small, deciduous trees. 
+                Apples have been grown for thousands of years in Asia 
+                and Europe, and were brought to North America by European 
+                colonists.
+            </span>
+        </div>
+    </div>
+</body>
+</html>

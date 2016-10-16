@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            WinJS.UI.Pages.define("page1.html", {
+                ready: function () {
+
+                    appbar.winControl.showOnlyCommands(["cmdBold", "cmdFont", "cmdAdd"]);
+                    appbar.winControl.getCommandById("cmdBold").disabled = true;
+
+                    appbar.addEventListener("click", function (e) {
+                        command.innerText = e.target.winControl.label;
+                    });
+                    WinJS.UI.Pages.render("standardNavBar.html", navBarContainer);
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="page1Container" class="container">
+            <h1>This is Page 1</h1>
+            <span>Command: <span id="command">None</span></span>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/css/flipview.css" rel="stylesheet" />
+    <script src="/js/pages/flipview.js"></script>
+    <style>
+        #flip .win-navleft, #flip .win-navright {
+            border: medium solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="flipItem">
+            <img data-win-bind="src: file" />
+            <div class="flipTitle" data-win-bind="innerText: name"></div>
+        </div>
+    </div>
+
+    <div id="flipViewContainer" class="flexContainer">
+        <div class="controlPanel">
+            <div id="flip" data-win-control="WinJS.UI.FlipView"
+                data-win-options="{itemDataSource: ViewModel.data.images.dataSource}">
+            </div>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+</body>
+</html>

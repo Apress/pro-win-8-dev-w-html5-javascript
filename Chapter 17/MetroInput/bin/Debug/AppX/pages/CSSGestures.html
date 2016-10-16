@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #contentZoom {
+            overflow: scroll;            
+            -ms-content-zooming: zoom;
+            -ms-content-zoom-limit-min: 50%;
+            -ms-content-zoom-limit-max: 200%;
+            -ms-overflow-style: -ms-autohiding-scrollbar;            
+            -ms-content-zoom-snap-points: snapList(50%, 75%, 100%, 200%);
+            -ms-content-zoom-snap-type: mandatory;
+        }
+    </style>
+    <script>
+        WinJS.UI.Pages.define("/pages/CSSGestures.html", {
+            ready: function () {
+                zoomFactor.value = contentZoom.msContentZoomFactor.toFixed(2);
+
+                contentZoom.addEventListener("MSContentZoom", function (e) {
+                    zoomFactor.value = contentZoom.msContentZoomFactor.toFixed(2);
+                });
+
+                zoomFactor.addEventListener("change", function (e) {
+                    contentZoom.msContentZoomFactor = zoomFactor.value;
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="contentZoomContainer" class="container">
+        <div id="contentZoom" class="panel">
+            <img class="imageRect" src="/images/aster.jpg">
+        </div>
+
+        <div id="zoomDetail" class="panel">
+          <div>
+                <h2 class="sectionHeader">Zoom Factor:</h2>
+                <input id="zoomFactor" class="cinput"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

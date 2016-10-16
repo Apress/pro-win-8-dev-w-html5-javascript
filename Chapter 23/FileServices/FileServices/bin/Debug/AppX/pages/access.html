@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #accessImgElem {display: none;}
+    </style>
+    <script>
+        var $ = WinJS.Utilities.query;
+        var storage = Windows.Storage;
+        var pickers = Windows.Storage.Pickers;
+        var access = Windows.Storage.AccessCache;
+
+        WinJS.UI.Pages.define("/pages/access.html", {
+            ready: function () {
+                $('#accessButtons button').listen("click", function (e) {
+                    if (this.id == "pick") {
+                        var folderPicker = pickers.FolderPicker();
+                        folderPicker.fileTypeFilter.push("*");
+                        folderPicker.suggestedStartLocation =
+                            pickers.PickerLocationId.musicLibrary;
+                        folderPicker.pickSingleFolderAsync().then(function (folder) {
+                            if (folder != null) {
+                                var token = access.StorageApplicationPermissions
+                                    .futureAccessList.add(folder);
+                                storage.ApplicationData.current.
+                                    localSettings.values["folder"] = token;
+                                accessTitleElem.innerText = "Selected: " +
+                                    folder.displayName;
+                            }
+                        });
+                    } else {
+                        var token = storage.ApplicationData.current.
+                            localSettings.values["folder"];
+                        var folder = access.StorageApplicationPermissions
+                                .futureAccessList.getFolderAsync(token)
+                                .then(function (folder) {
+                                    return folder.getFilesAsync().then(function (files) {
+                                        files[0].getThumbnailAsync(
+                                            storage.FileProperties.ThumbnailMode.singleItem,
+                                                500).then(function (thumb) {
+                                                    accessImgElem.src = URL.createObjectURL(thumb);
+                                                    accessImgElem.style.display = "block";
+                                                    accessTitleElem.innerText = files[0].displayName;
+                                                });
+                                    });
+                                });
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="accessButtons" class="container">
+        <button id="pick">Pick Folder</button>
+        <button id="load">Load File</button>
+    </div>
+    <div class="container">
+        <img id="accessImgElem" class="imgElem" />
+        <div id="accessTitleElem" class="imgTitle">Ready</div>
+    </div>
+</body>
+</html>

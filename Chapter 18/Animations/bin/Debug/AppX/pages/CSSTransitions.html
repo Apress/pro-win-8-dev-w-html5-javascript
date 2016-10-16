@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .colorTransition {
+            color: black;
+            background-color: white;
+            font-size: 50pt;
+            transition-delay: 500ms;
+            transition-duration: 1000ms;
+        }
+    </style>
+    <script>
+        var transforms = ["", "translateX(100px) rotate(45deg)",
+            "translateY(50px) scale(1.2)"];
+        var durations = ["500ms", "1000ms", "250ms"];
+        var colors = ["black", "red", "yellow"];
+
+        WinJS.UI.Pages.define("/pages/CSSTransitions.html", {
+            ready: function () {
+                $("div.coloredRect").listen("click", function (e) {
+                    switch (e.target.id) {
+                        case "transitionTarget":
+                            WinJS.Utilities.toggleClass(e.target, "colorTransition");
+                            break;
+                        case "transformTarget":
+                            var curr = e.target.style.transform;
+                            var index = (transforms.indexOf(curr) + 1) % 3;
+                            e.target.style.transitionDuration = durations[index];
+                            e.target.style.transform = transforms[index];
+                            e.target.style.backgroundColor = colors[index];
+                            break;
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="outerContainer">
+        <div class="panel">
+            <div id="transitionTarget" class="coloredRect column">Transition</div>
+        </div>
+        <div class="panel">
+            <div id="transformTarget" class="coloredRect column">Transform</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\ProtocolHelper.jsproj;neutral

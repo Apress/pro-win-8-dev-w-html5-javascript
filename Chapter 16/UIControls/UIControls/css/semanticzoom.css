@@ -1,0 +1,16 @@
+﻿#semanticZoomer {
+    width: 500px;
+    height: 500px;
+}
+
+*.zoomedInListItem {
+    width: 150px;
+}
+
+*.zoomedInListData {
+    background-color: black;
+    text-align: center;
+    border: solid medium white;
+    font-size: 20pt;    
+    padding: 10px;
+}

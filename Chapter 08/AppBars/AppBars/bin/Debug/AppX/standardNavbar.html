@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+<script>
+    WinJS.UI.Pages.define("standardNavBar.html", {
+        ready: function () {
+
+            ViewModel.State.navBarControlElement = navbar;
+
+            navbar.addEventListener("click", function (e) {
+                var navTarget = e.target.winControl.id
+                    == "cmdPage2" ? "page2.html" : "page3.html";
+                WinJS.Navigation.navigate(navTarget);
+            });
+        }
+    });
+</script>
+    </head>
+    <body>
+        <div id="navbar" data-win-control="WinJS.UI.AppBar"
+            data-win-options="{placement:'top'}">
+            
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'cmdPage2', label:'Page 2', icon:'\u0032',
+                    section:'selection', tooltip:'Page2'}">
+            </button>     
+
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'cmdPage3', label:'Page 3', icon:'\u0033',
+                    section:'selection', tooltip:'Page3'}">
+            </button>     
+        </div>
+    </body>
+</html>

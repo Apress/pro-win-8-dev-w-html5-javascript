@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style media="print">
+        #buttonContainer { visibility: hidden }
+        .listTitle { text-align: center; max-width: none;
+            border: thin solid black; margin: 0px }
+        .listImg { height: 180px; width: 270px }
+    </style>
+    <script>
+        var print = Windows.Graphics.Printing;
+
+        WinJS.UI.Pages.define("/pages/albumView.html", {
+            ready: function () {
+
+                print.PrintManager.getForCurrentView().onprinttaskrequested = function (e) {
+                    if (ViewModel.fileList.length > 0) {
+                        var printTask = e.request.createPrintTask("PrintAlbum",
+                            function (printEvent) {
+                                var deferral = printEvent.getDeferral();
+
+                                listView.winControl.selection.getItems().then(function (items) {
+                                    if (items.length == 1) {
+                                        WinJS.Navigation.navigate("/pages/printView.html", {
+                                            event: printEvent,
+                                            deferral: deferral,
+                                            item: items[0]
+                                        });
+                                        printTask.addEventListener("completed", function () {
+                                            WinJS.Navigation.navigate("/pages/albumView.html");
+                                        });
+                                    } else {
+                                        App.adaptLayout(true);
+                                        setImmediate(function () {
+                                            printEvent.setSource(
+                                                MSApp.getHtmlPrintDocumentSource(document));
+                                            deferral.complete();
+                                        });
+                                        printTask.addEventListener("completed", App.adaptLayout);
+                                    }
+                                });
+                            });
+                        printTask.options.orientation = print.PrintOrientation.landscape;
+                    };
+                };
+
+                WinJS.Utilities.query("button").listen("click", function (e) {
+                    if (this.id == "openButton") {
+                        App.pickFiles();
+                    } else {
+                        App.clearCache();
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="listView" data-win-control="WinJS.UI.ListView"
+        data-win-options="{
+            itemTemplate: imageTemplate,
+            itemDataSource: ViewModel.fileList.dataSource,
+            tapBehavior: WinJS.UI.TapBehavior.directSelect
+        }">
+    </div>
+    <div id="buttonContainer">
+        <button id="openButton">Open</button>
+        <button id="clearButton">Clear</button>
+    </div>
+</body>
+</html>

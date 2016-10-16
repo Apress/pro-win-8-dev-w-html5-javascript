@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Content</title>
+        <style type="text/css">
+            #contentBasicTop {
+                border: medium solid white;
+                margin: 10px;
+                padding: 10px;                    
+                font-family: serif;
+            }
+        </style>
+        <script>
+            WinJS.UI.Pages.define("/contentBasic.html", {
+                ready: function () {
+                    var backButton = document.getElementById("back");
+
+                    if (!WinJS.Navigation.canGoBack) {
+                        backButton.disabled = true;
+                    } else {
+                        backButton.addEventListener("click", function (e) {
+                            WinJS.Navigation.back();
+                        });
+                    }
+
+                    if (WinJS.Navigation.state) {
+                        $("#contentBasicTop div.message")[0].innerText
+                            = WinJS.Navigation.state;
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="contentBasicTop">
+            <div class="message">
+                No Message 
+            </div>
+            <button id="back">Back</button>
+        </div>
+    </body>
+</html>

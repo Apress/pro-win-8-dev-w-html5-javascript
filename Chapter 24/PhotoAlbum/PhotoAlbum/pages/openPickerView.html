@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #openListView { width: 75%; height: 275px;}
+    </style>
+    <script>
+        var storage = Windows.Storage;
+        var provider = Windows.Storage.Pickers.Provider;
+
+        WinJS.UI.Pages.define("/pages/openPickerView.html", {
+            ready: function (element, pickerUI) {
+
+                var previousSelection = [];
+
+                openListView.winControl.selectionMode = (pickerUI.selectionMode ==
+                    provider.FileSelectionMode.single) ? WinJS.UI.SelectionMode.single
+                    : WinJS.UI.SelectionMode.multi;
+
+                openListView.addEventListener("selectionchanged", function (e) {
+
+                    previousSelection.forEach(function (id) {
+                        pickerUI.removeFile(id);
+                    });
+                    previousSelection.length = 0;
+
+                    var newSelection = openListView.winControl.selection.getItems()
+                        .then(function (items) {
+                            items.forEach(function (item) {
+                                pickerUI.addFile(item.data.file.path,
+                                    item.data.file);
+                                previousSelection.push(item.data.file.path);
+                            });
+                        });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="title">Select images from the album</div>
+    <div id="openListView" data-win-control="WinJS.UI.ListView" 
+        data-win-options="{
+            itemTemplate: imageTemplate,
+            itemDataSource: ViewModel.fileList.dataSource,
+            tapBehavior: WinJS.UI.TapBehavior.directSelect,
+            maxRows: 1
+        }">
+    </div>
+</body>
+</html>

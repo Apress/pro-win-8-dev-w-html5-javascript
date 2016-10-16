@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <style>
+        #historyDiv #backbutton { color: white; border-color: white;}
+        #historyDiv div.win-header { color: white; background-color: #004d60;}
+    </style>
+    <script>
+        WinJS.UI.Pages.define("historySettings.html", {
+            ready: function () {
+                showToggle.addEventListener("change", function () {
+                    ViewModel.Settings.showHistory = showToggle.winControl.checked;
+                });
+                backbutton.addEventListener("click", function () {
+                    WinJS.UI.SettingsFlyout.show();
+                });
+                WinJS.Binding.processAll(historyDiv, ViewModel.Settings);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="historyDiv" data-win-control="WinJS.UI.SettingsFlyout" 
+            data-win-options="{width:'wide'}">
+        <div class="win-header">
+            <button id="backbutton" class="win-backbutton"></button>
+            <div class="win-label">History</div>
+        </div>
+        <div class="win-content">
+            <div id="showToggle" data-win-control="WinJS.UI.ToggleSwitch"
+                data-win-options="{title: 'Show Calculation History'}"
+                data-win-bind="winControl.checked: showHistory">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

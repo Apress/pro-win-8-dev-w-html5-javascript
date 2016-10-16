@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AppBars</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- AppBars references -->
+    <link href="/css/default.css" rel="stylesheet">
+    <link href="/css/extrastyles.css" rel="stylesheet">
+    <script src="/js/viewmodel.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="contentTarget"></div>
+    <div id="navBarContainer"></div>
+    <div id="appbar" data-win-control="WinJS.UI.AppBar">
+
+        <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdBold', label:'Bold', icon:'bold',
+                section:'selection', tooltip:'Bold', type: 'toggle'}">
+        </button>            
+
+        <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdFont', label:'Font', icon:'font',
+                section:'selection', tooltip:'Change Font', type: 'flyout', 
+                flyout: 'fontFlyout'}">
+        </button>            
+ 
+        <hr data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{type:'separator', section:'selection'}" />
+
+        <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdCut', label:'Cut', icon:'cut',
+                section:'selection', tooltip:'Cut'}">
+        </button>            
+
+        <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdCut', label:'Paste', icon:'paste',
+                section:'selection', tooltip:'Paste'}">
+        </button>            
+
+        <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdRemove',label:'Remove', icon:'remove',
+                section:'global', tooltip:'Remove item'}">
+        </button>
+
+        <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdAdd', label:'Add', icon:'add',
+                section:'global', tooltip:'Add item'}">
+        </button>
+    </div>
+
+    <div id="fontFlyout" data-win-control="WinJS.UI.Flyout">
+        <h3>Select a Font</h3>
+        <select id="fontSelect">
+            <option>First Font</option>
+            <option>Second Font</option>
+            <option>Third Font</option>
+        </select>
+    </div>
+
+</body>
+</html>

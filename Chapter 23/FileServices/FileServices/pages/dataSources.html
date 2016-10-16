@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        #flip {background-color: black; width: 500px; height: 500px;}
+    </style>
+    <script>
+        var storage = Windows.Storage;
+        var search = Windows.Storage.Search;
+
+        WinJS.Namespace.define("Converters", {
+            img: function (src, srcprop, dest, destprop) {
+                if (src.thumbnail == null) {
+                    src.addEventListener("thumbnailupdated", function (e) {
+                        dest[destprop] = URL.createObjectURL(src.thumbnail);
+                    });
+                } else {
+                    dest[destprop] = URL.createObjectURL(src.thumbnail);
+                }
+            },
+            general: function (src, srcprop, dest, destprop) {
+                dest[destprop] = src[srcprop];
+            }
+        });
+
+        Converters.img.supportedForProcessing = true;
+        Converters.general.supportedForProcessing = true;
+
+        WinJS.UI.Pages.define("/pages/dataSources.html", {
+            ready: function () {
+                storage.KnownFolders.picturesLibrary.getFolderAsync("flowers")
+                .then(function (folder) {
+                    var options = new search.QueryOptions();
+                    options.fileTypeFilter = [".png"];
+                    options.folderDepth = search.FolderDepth.deep;
+
+                    var query = folder.createFileQueryWithOptions(options);
+                    flip.winControl.itemDataSource
+                        = new WinJS.UI.StorageDataSource(query, {
+                            mode: storage.FileProperties.ThumbnailMode.picturesView,
+                            requestedThumbnailSize: 400,
+                            thumbnailOptions:
+                                storage.FileProperties.ThumbnailOptions.resizeThumbnail,
+                            synchronous: false
+                        });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="imgTemplate" data-win-control="WinJS.Binding.Template">
+        <div>
+            <img data-win-bind="src: img Converters.img">
+            <div class="imgTitle" data-win-bind="innerText: displayName 
+                Converters.general"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="flip" data-win-control="WinJS.UI.FlipView"
+            data-win-options="{itemTemplate: imgTemplate}">
+        </div>
+    </div>
+</body>
+</html>

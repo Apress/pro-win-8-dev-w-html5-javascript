@@ -1,0 +1,4 @@
+﻿body, #container { display: -ms-flexbox; -ms-flex-direction: row;
+    -ms-flex-align: stretch; -ms-flex-pack: center;}
+#container {-ms-flex-direction: column;}
+#container button {font-size: 30pt;width: 400px; margin: 10px;}

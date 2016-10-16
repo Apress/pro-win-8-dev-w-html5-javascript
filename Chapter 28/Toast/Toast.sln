@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows 8
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Toast", "Toast\Toast.jsproj", "{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|ARM.Build.0 = Debug|ARM
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|ARM.Deploy.0 = Debug|ARM
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|x64.ActiveCfg = Debug|x64
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|x64.Build.0 = Debug|x64
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|x64.Deploy.0 = Debug|x64
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|x86.ActiveCfg = Debug|x86
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|x86.Build.0 = Debug|x86
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Debug|x86.Deploy.0 = Debug|x86
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|ARM.ActiveCfg = Release|ARM
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|ARM.Build.0 = Release|ARM
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|ARM.Deploy.0 = Release|ARM
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|x64.ActiveCfg = Release|x64
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|x64.Build.0 = Release|x64
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|x64.Deploy.0 = Release|x64
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|x86.ActiveCfg = Release|x86
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|x86.Build.0 = Release|x86
+		{18A5E1F4-A771-436A-AFB7-06DAC2C570EF}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,24 @@
+﻿@font-face { 
+    font-family: 'Music'; 
+    font-style: normal; 
+    font-weight: normal; 
+    src: url('/resources/MusiQwik.ttf'); 
+}
+
+*.music {
+    font-family: Music, cursive;
+    font-size: 200px;
+    letter-spacing: 0px;
+}
+
+*.musicSmall {
+    font-size: 100px;
+}
+
+*.musicDisabled {
+    color: #808080;
+}
+
+#pageFrame {
+    height: 100%;
+}

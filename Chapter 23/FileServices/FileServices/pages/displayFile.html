@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        #imgElem { height: 500px; }
+    </style>
+    <script>
+        var storage = Windows.Storage;
+        var search = Windows.Storage.Search;
+        WinJS.UI.Pages.define("/pages/displayFile.html", {
+            ready: function (element, data) {
+                storage.KnownFolders.picturesLibrary
+                    .getFilesAsync(search.CommonFileQuery.orderByName)
+                    .then(function (files) {
+                        if (files.length == 0) {
+                            imgElem.style.display = "none";
+                            titleElem.innerText = "No Files Found!";
+                        } else if (files[0].contentType.indexOf("image") != 0) {
+                            imgElem.style.display = "none";
+                            titleElem.innerText = "Not an image file";
+                        } else {
+                            imgElem.src = URL.createObjectURL(files[0]);
+                            titleElem.innerText = files[0].displayName;
+                        }
+                    });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img id="imgElem" />
+        <div id="titleElem" class="imgTitle"></div>
+    </div>
+</body>
+</html>

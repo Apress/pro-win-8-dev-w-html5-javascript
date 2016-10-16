@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DataGen</title>
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <style>
+        body {
+            display: -ms-flexbox;
+            -ms-flex-align: center;
+            -ms-flex-pack: center;
+        }
+        button {
+            font-size: 25pt;
+        }
+    </style>
+
+    <script>
+        WinJS.Application.onactivated = function (args) {
+            gen.addEventListener("click", function (e) {
+                var picker = Windows.Storage.Pickers.FileSavePicker();
+                picker.defaultFileExtension = ".json";
+                picker.suggestedFileName = "calcData";
+                picker.fileTypeChoices.insert("JSON", [".json"]);
+                    
+                    
+
+                picker.pickSaveFileAsync().then(function (saveFile) {
+                    if (saveFile) {
+                        var dataObjects = [];
+                        for (var first = 1; first <= 100; first++) {
+                            for (var second = 1; second <= 100; second++) {
+                                dataObjects.push(JSON.stringify({
+                                    first: first,
+                                    second: second,
+                                    result: first + second
+                                }));
+                            }
+                        }
+                        Windows.Storage.FileIO.writeLinesAsync(saveFile, dataObjects);
+                    }
+                });
+            });
+        }
+        WinJS.Application.start();
+    </script>
+
+</head>
+<body>
+    <button id="gen">Generate</button>
+</body>
+</html>

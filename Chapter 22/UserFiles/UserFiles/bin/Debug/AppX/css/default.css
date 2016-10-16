@@ -1,0 +1,18 @@
+﻿body {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center; -ms-flex-pack: center;
+}
+
+.container {
+    height: 80%; margin: 10px; padding: 10px;
+    border: medium solid white;
+}
+
+#buttonsContainer button, .message {
+    display: block; font-size: 20pt;
+    width: 100%; margin-top: 10px;
+}
+
+#listContainer {width: 30%;}
+#list { height: 100%;}

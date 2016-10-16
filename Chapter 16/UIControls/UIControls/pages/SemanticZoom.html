@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/css/listview.css" rel="stylesheet">
+    <link href="/css/semanticzoom.css" rel="stylesheet">
+<script>
+    WinJS.UI.Pages.define("/pages/SemanticZoom.html", {
+        ready: function () {
+            Templates.createControls(rightPanel, semanticZoomer, "semanticZoom");
+
+            semanticZoomer.addEventListener("zoomchanged", function (e) {
+                zoomedOut.winControl.checked = e.detail;
+            });
+        }
+    });
+</script>
+</head>
+<body>
+    <div id="zoomedInItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="zoomedInListItem">
+            <div class="zoomedInListData" data-win-bind="innerText: name"></div>
+        </div>
+    </div>
+
+    <div id="zoomedOutItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="listItem">
+            <div class="listData" data-win-bind="innerText: firstLetter"></div>
+        </div>
+    </div>
+
+    <div id="groupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div>Letter: <span data-win-bind="innerText: firstLetter"></span></div>
+    </div>
+    
+    <div id="semanticZoomContainer" class="flexContainer">
+<div class="controlPanel">
+    <div id="semanticZoomer" data-win-control="WinJS.UI.SemanticZoom">
+        <div id="zoomedInList" data-win-control="WinJS.UI.ListView"
+            data-win-options="{itemTemplate: zoomedInItemTemplate,
+                itemDataSource: ViewModel.data.groupedNames.dataSource,
+                groupDataSource: ViewModel.data.groupedNames.groups.dataSource,
+                groupHeaderTemplate: groupHeaderTemplate}">
+        </div>
+        <div id="zoomedOutList" data-win-control="WinJS.UI.ListView"
+            data-win-options="{itemTemplate: zoomedOutItemTemplate, 
+                itemDataSource: ViewModel.data.groupedNames.groups.dataSource}">
+        </div>
+</div>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+</body>
+</html>

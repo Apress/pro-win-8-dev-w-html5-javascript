@@ -1,0 +1,13 @@
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bin\Release\resources.pri
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bin\Release\AppxManifest.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bin\Release\PhotoApp.build.appxrecipe
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\priconfig.xml.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\layout.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\resources.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\pri.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\priconfig.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\layout.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\resources.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\pri.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\LanguageQualifiers.txt
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 33\PhotoApp\PhotoApp\bld\Release\ProjectArchitectures.txt

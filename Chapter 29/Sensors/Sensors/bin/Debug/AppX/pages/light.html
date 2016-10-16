@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/light.html", {
+            ready: function () {
+                var sensor = Windows.Devices.Sensors.LightSensor.getDefault();
+                if (sensor == null) {
+                    WinJS.Utilities.query(".label").setStyle("display", "none");
+                    WinJS.Utilities.query(".warning").setStyle("display", "block");
+                } else {
+                    //displaySensorReading(sensor.getCurrentReading().illuminanceInLux);
+                    
+                    //sensor.addEventListener("readingchanged", function (e) {
+                    //    displaySensorReading(e.reading.illuminanceInLux);
+                    //});
+
+                    setInterval(function () {
+                        displaySensorReading(sensor.getCurrentReading().illuminanceInLux);
+                    }, 100);
+
+                }
+            }
+        });
+
+        function displaySensorReading(reading) {
+            level.innerText = reading;
+            var conditionText = "Unknown";
+            if (reading > 10000) {
+                conditionText = "Outdoors";
+            } else if (reading > 300) {
+                conditionText = "Office";
+            } else if (reading > 50) {
+                conditionText: "Home";
+            } else {
+                conditionText = "Dark";
+            }
+            condition.innerText = conditionText;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="lightContainer" class="container">
+        <h1 class="label warning">No Light Sensor Installed</h1>
+        <h1 class="label">Light level: <span id="level">(None)</span></h1>
+        <h1 class="label">Condition: <span id="condition">(None)</span></h1>
+    </div>
+</body>
+</html>

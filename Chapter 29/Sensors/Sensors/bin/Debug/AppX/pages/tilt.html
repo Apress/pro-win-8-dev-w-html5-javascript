@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #box { background-color: red; width: 200px; margin: 100px; height: 200px;}
+    </style>
+    <script>
+        WinJS.UI.Pages.define("/pages/tilt.html", {
+            ready: function () {
+                var sensor = Windows.Devices.Sensors.Inclinometer.getDefault();
+                if (sensor == null) {
+                    WinJS.Utilities.query(".label").setStyle("display", "none");
+                    WinJS.Utilities.query(".warning").setStyle("display", "block");
+                } else {
+                    displaySensorReading(sensor.getCurrentReading());
+
+                    setInterval(function () {
+                        displaySensorReading(sensor.getCurrentReading());
+                    }, 100);
+                    //sensor.addEventListener("readingchanged", function (e) {
+                    //    displaySensorReading(e.reading);
+                    //});
+                }
+            }
+        });
+        function displaySensorReading(reading) {
+            pitch.innerText = reading.pitchDegrees.toFixed(1);
+            roll.innerText = reading.rollDegrees.toFixed(1);
+            yaw.innerText = reading.yawDegrees.toFixed(1);
+            box.style.transform =  "rotate(" + (360 - reading.rollDegrees) + "deg)";
+        }
+    </script>
+</head>
+<body>
+    <div id="tiltContainer" class="container">
+        <h1 class="label warning">No Inclinometer Installed</h1>
+        <h1 class="label">Pitch: <span id="pitch">(None)</span></h1>
+        <h1 class="label">Roll: <span id="roll">(None)</span></h1>
+        <h1 class="label">Yaw: <span id="yaw">(None)</span></h1>
+    </div>
+    <div id="boxContainer" class="container">
+        <div id="box"></div>
+    </div>
+</body>
+</html>

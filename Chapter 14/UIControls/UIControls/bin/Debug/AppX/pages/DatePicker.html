@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .win-datepicker-date {
+            display: none;
+        }
+    </style>
+<script>
+    WinJS.UI.Pages.define("/pages/DatePicker.html", {
+        ready: function () {
+
+            var proxyObject = WinJS.Binding.as({
+                dateLength: 2
+            });
+
+            Templates.createControls(rightPanel, picker, "datePicker", proxyObject)
+            .then(function () {
+
+                proxyObject.bind("dateLength", function (val) {
+                    picker.winControl.datePattern = "{day.integer(" + val + ")}";
+                });
+
+                picker.addEventListener("change", function (e) {
+                    current.innerText = picker.winControl.current.toLocaleDateString();
+                });
+            });
+        }
+    });
+</script>
+</head>
+<body>
+    <div id="datePickerContainer" class="flexContainer">
+        <div class="controlPanel">
+
+            <h2>Select a date:</h2>
+            <div id="picker" data-win-control="WinJS.UI.DatePicker">
+            </div>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+</body>
+</html>

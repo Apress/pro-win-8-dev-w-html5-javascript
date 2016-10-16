@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>UserFiles</title>
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <!-- UserFiles references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/viewmodel.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="template" data-win-control="WinJS.Binding.Template">
+        <div class="message" data-win-bind="innerText: message"></div>
+    </div>
+
+    <div id="buttonsContainer" class="container">
+        <button id="copyFiles">Copy Files</button>
+        <button id="copySeq">Copy Files (Ordered)</button>
+        <button id="deleteFiles">Delete Files</button>
+        <button id="sortFiles">Sort Files</button>
+        <button id="filterBasic">Filter (Basic)</button>
+        <button id="filterAQS">Filter (AQS)</button>
+        <button id="commonQuery">Common Query</button>
+        <button id="groupType">Group (Type)</button>
+    </div>
+
+    <div id="listContainer" class="container">
+        <div id="list" data-win-control="WinJS.UI.ListView" 
+            data-win-options="{
+                itemDataSource: ViewModel.State.messages.dataSource,
+                itemTemplate: template,
+                layout: {type:WinJS.UI.ListLayout}
+            }">
+        </div>
+    </div>
+</body>
+</html>

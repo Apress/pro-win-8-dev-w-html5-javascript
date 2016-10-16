@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #rateButton, #flyoutInteractive button { font-size: 16pt; margin-top: 10px}
+    </style>
+<style>
+    .win-flyout { text-align: center }
+</style>
+
+    <script>
+        WinJS.UI.Pages.define("/pages/Flyout.html", {
+            ready: function () {
+
+                Templates.createControls(rightPanel, flyout, "flyout").then(function () {
+                    $("button").listen("click", function (e) {
+                        if (e.target.id == "rateButton") {
+                            flyoutInteractive.winControl.show(e.target);
+                        } else if (e.target.id == "flyoutInteractiveButton") {
+                            flyoutInteractive.winControl.hide();
+                        } else if (e.target.innerText == "Show") {
+                            flyout.winControl.show(targetImg);
+                        } else if (e.target.innerText == "Hide") {
+                            flyout.winControl.hide();
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="flyoutContainer" class="flexContainer">
+        <div class="controlPanel">
+            <img id="targetImg" src="/images/apple.png" />
+            <button id="rateButton">Rate</button>
+        </div>
+        <div id="rightPanel" class="controlPanel"></div>
+    </div>
+
+    <div id="flyout" data-win-control="WinJS.UI.Flyout">
+        <h2>Apples</h2>
+        <span>
+            Apples grow on small, deciduous trees. 
+            Apples have been grown for thousands of years in Asia 
+            and Europe, and were brought to North America by European 
+            colonists.
+        </span>
+    </div>
+
+    <div id="flyoutInteractive" data-win-control="WinJS.UI.Flyout">
+        <h2>How much do you like apples?</h2>
+        <div data-win-control="WinJS.UI.Rating"></div>
+        <div>
+            <button id="flyoutInteractiveButton">Close</button>
+        </div>
+    </div>
+</body>
+</html>

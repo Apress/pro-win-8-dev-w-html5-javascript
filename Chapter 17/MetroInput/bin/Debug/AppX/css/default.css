@@ -1,0 +1,105 @@
+﻿body {
+    background-color: #5A8463;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+}
+
+.container {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;   
+}
+
+.panel {
+    border: medium white solid;
+    margin: 10px;
+    padding: 20px;    
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;    
+    text-align: center;
+}
+
+.sectionHeader {
+    font-size: 30pt;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.coloredRect {
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    font-size: 40pt;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;    
+}
+
+#eventList {
+    width: 500px;
+    height: 500px;
+}
+
+.eventDisplay {
+    background-color: #5A8463;
+}
+
+.pointerDetail, .eventDetail, .primaryDetail {
+    display: inline-block;
+    width: 250px;
+    font-size: 20pt;
+    text-align: left;
+}
+
+.pointerDetail {
+    width: 100px;
+}
+
+.primaryDetail {
+    width: 75px;
+}
+
+input.cinput {
+    width: 75px;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 18pt;
+}
+
+.imageRect {
+    width: 600px;
+    height: 80vh;
+}
+
+#capabilitiesContainer div.panel {
+    -ms-flex-pack: start;
+}
+
+.capabilityTitle {
+    text-align: right;  
+    width: 250px;     
+}
+
+span.capabilityResult {
+    text-align: left;    
+    font-weight: bold;     
+    width: 80px; 
+}
+
+div.capability {
+    font-size: 20pt;
+    width: 350px;
+}
+
+div.capability > * {
+    display: inline-block;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #menu button.win-command:disabled {
+            background-color: lightgray;
+            color: gray;
+        }
+    </style>
+    <script>
+        WinJS.UI.Pages.define("/pages/Menu.html", {
+            ready: function () {
+
+                var proxyObject = WinJS.Binding.as({
+                    placement: "top",
+                    alignment: "left"
+                });
+
+                Templates.createControls(rightPanel, menu, "menu", proxyObject);
+
+                ["placement", "alignment"].forEach(function (propName) {
+                    proxyObject.bind(propName, function (val) {
+                        menu.winControl.placement = proxyObject.placement;
+                        menu.winControl.alignment = proxyObject.alignment;
+                        borderMenu.winControl.placement = proxyObject.placement;
+                        borderMenu.winControl.alignment = proxyObject.alignment;
+                    });
+                });
+
+                targetImg.addEventListener("contextmenu", function (e) {
+                    menu.winControl.show(e.target);
+                    e.preventDefault();
+                });
+
+                $('#menu, #borderMenu').listen("click", function (e) {
+                    if (WinJS.Utilities.hasClass(e.target, "background")) {
+                        targetImg.style.backgroundColor = e.target.winControl.label.toLowerCase();
+                        WinJS.Utilities.query("button.background").forEach(function (menuButton) {
+                            menuButton.winControl.selected = (menuButton == e.target);
+                        });
+                    } else if (e.target.winControl && e.target.winControl.id == "menuCmdShowBorder") {
+
+                        var showBorder = e.target.winControl.selected;
+                        if (!showBorder) {
+                            targetImg.style.border = "none";
+                        }
+                        this.winControl.getCommandById("menuCmdBorderColor").disabled = !showBorder
+
+                    } else if (e.target.hasAttribute("data-color")) {
+                        targetImg.style.border = "medium solid " + e.target.getAttribute("data-color");
+                        WinJS.Utilities.query("button[data-color]").forEach(function (menuButton) {
+                            menuButton.winControl.selected = menuButton == e.target;
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="menuContainer" class="flexContainer">
+        <div class="controlPanel">
+            <img id="targetImg" src="/images/apple.png"/>
+        </div>
+
+        <div id="rightPanel" class="controlPanel"></div>
+
+        <div id="menu" data-win-control="WinJS.UI.Menu">
+
+            <button data-win-control="WinJS.UI.MenuCommand" class="border" disabled
+                data-win-options="{id: 'menuCmdBorderColor', label:'Border Color',
+                    type:'flyout', flyout:'borderMenu'}"></button>
+
+            <button data-win-control="WinJS.UI.MenuCommand" class="border"
+                data-win-options="{id: 'menuCmdShowBorder', 
+                    label:'Show Border', type:'toggle'}"></button>
+
+            <hr data-win-control="WinJS.UI.MenuCommand" 
+                data-win-options="{type:'separator'}" />
+
+            <button data-win-control="WinJS.UI.MenuCommand" class="background"
+                data-win-options="{id: 'menuCmdRed', label:'Red'}"></button>
+
+            <button data-win-control="WinJS.UI.MenuCommand" class="background"
+                data-win-options="{id: 'menuCmdWhite', label:'White'}"></button>
+
+            <button data-win-control="WinJS.UI.MenuCommand" class="background"
+                data-win-options="{id: 'menuCmdGreen', label:'Green'}"></button>
+        </div>
+
+        <div id="borderMenu" data-win-control="WinJS.UI.Menu">
+            <button data-win-control="WinJS.UI.MenuCommand" data-color="red"
+                data-win-options="{id: 'menuCmdRedBorder', label:'Red Border'}">
+            </button>
+            <button data-win-control="WinJS.UI.MenuCommand" data-color="black"
+                data-win-options="{id: 'menuCmdBlackBorder', label:'Black Border'}">
+            </button>
+            <button data-win-control="WinJS.UI.MenuCommand" data-color="white"
+                data-win-options="{id: 'menuCmdWhiteBorder', label:'White Border'}">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

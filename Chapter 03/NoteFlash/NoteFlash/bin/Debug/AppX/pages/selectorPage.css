@@ -1,0 +1,43 @@
+﻿#selectorFrame {
+    display: -ms-grid;
+    -ms-grid-rows: 0.25fr 0.25fr 1fr 0.5fr;
+    -ms-grid-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+div.musicButton {
+    border: medium solid white;
+    margin: 25px;
+    padding: 10px;
+}
+
+div.musicButton:hover {
+    background-color: #3D4C42;
+}
+
+div.musicButtonPressed {
+    background-color: #6B997A;
+}
+
+#prompt {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-column-span: 3;
+    margin: 10px;
+}
+
+#leftHand {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+}
+
+#rightHand {
+    -ms-grid-column: 4;
+    -ms-grid-row: 3;
+}
+
+#bothHands {
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+}

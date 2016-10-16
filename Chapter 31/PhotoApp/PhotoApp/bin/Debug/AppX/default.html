@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PhotoApp</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- PhotoApp references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/viewmodel.js"></script>
+    <script src="/js/store.js"></script>
+    <script src="/js/storeInteractions.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="flipTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="flipItem">
+            <img class="flipImg" data-win-bind="src: image" />
+            <div class="flipTitle" data-win-bind="innerText: title"></div>
+        </div>
+    </div>
+
+    <div id="listTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="listItem">
+            <img class="listImg" data-win-bind="src: image" />
+        </div>
+    </div>
+
+    <div id="buttonContainer" class="container">
+        <div id="fileTypes" data-win-control="WinJS.UI.ToggleSwitch"
+            data-win-bind="winControl.checked: State.fileTypes"
+            data-win-options="{title: 'Show JPG',  labelOn: 'Yes', labelOff: 'No'}">
+        </div>
+
+        <div id="depth" data-win-control="WinJS.UI.ToggleSwitch"
+            data-win-bind="winControl.checked: State.depth"
+            data-win-options="{title: 'All Folders',  labelOn: 'Yes', labelOff: 'No'}">
+        </div>
+
+        <div id="thumbnails" data-win-control="WinJS.UI.ToggleSwitch"
+            data-win-bind="winControl.checked: State.thumbnails"
+            data-win-options="{title: 'Show Thumbnails',  labelOn: 'Yes', labelOff: 'No'}">
+        </div>
+
+        <button id="refresh">Refresh</button>
+        <button id="upgrade">Buy/Upgrade</button>
+    </div>
+
+    <div id="imageContainer" class="container">
+        <div id="flipView" data-win-control="WinJS.UI.FlipView" 
+            data-win-options="{ itemTemplate: flipTemplate,
+                itemDataSource: ViewModel.State.pictureDataSource.dataSource}">
+        </div>
+        <div id="listView" data-win-control="WinJS.UI.ListView"
+            data-win-bind="style.display: State.thumbnails Converters.display"
+            data-win-options="{ itemTemplate: listTemplate,
+                tapBehavior: invokeOnly,
+                itemDataSource: ViewModel.State.pictureDataSource.dataSource}">
+        </div>
+    </div>
+</body>
+</html>

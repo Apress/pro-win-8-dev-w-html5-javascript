@@ -1,0 +1,13 @@
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bin\Debug\resources.pri
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bin\Debug\AppxManifest.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bin\Debug\ShareHelper.build.appxrecipe
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\priconfig.xml.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\layout.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\resources.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\pri.resfiles.intermediate
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\priconfig.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\layout.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\resources.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\pri.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\LanguageQualifiers.txt
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 25\ShareHelper\ShareHelper\bld\Debug\ProjectArchitectures.txt

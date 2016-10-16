@@ -1,0 +1,9 @@
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bin\Debug\resources.pri
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bin\Debug\AppxManifest.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bin\Debug\ProtocolHelper.build.appxrecipe
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bld\Debug\priconfig.xml
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bld\Debug\layout.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bld\Debug\resources.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bld\Debug\pri.resfiles
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bld\Debug\LanguageQualifiers.txt
+C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\ProtocolHelper\ProtocolHelper\bld\Debug\ProjectArchitectures.txt

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #compass {
+            width: 200px; height: 200px; text-align: center;
+            display: -ms-flexbox; -ms-flex-direction: column;-ms-flex-pack: center;}
+        #cspan { display: block; font-family: "Segoe UI Symbol"; font-size: 100pt;}        
+    </style>
+    <script>
+        WinJS.UI.Pages.define("/pages/direction.html", {
+            ready: function () {
+                var sensor = Windows.Devices.Sensors.Compass.getDefault();
+                if (sensor == null) {
+                    WinJS.Utilities.query(".label").setStyle("display", "none");
+                    WinJS.Utilities.query(".warning").setStyle("display", "block");
+                } else {
+                    displaySensorReading(sensor.getCurrentReading());
+                    sensor.addEventListener("readingchanged", function (e) {
+                        displaySensorReading(e.reading);
+                    });
+                }
+            }
+        });
+
+        function displaySensorReading(reading) {
+            heading.innerText = reading.headingMagneticNorth;
+            cspan.style.transform = "rotate(" + (360 - reading.headingMagneticNorth) + "deg)";
+        }
+    </script>
+</head>
+<body>
+    <div id="compassContainer" class="container">
+        <div id="compass">
+            <span id="cspan">&#8657;</span>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="label warning">No Compass Installed</h1>
+        <h1 class="label">Heading: <span id="heading">(None)</span></h1>
+    </div>
+</body>
+</html>

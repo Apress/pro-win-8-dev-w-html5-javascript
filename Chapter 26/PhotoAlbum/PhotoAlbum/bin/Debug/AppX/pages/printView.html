@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #imgContainer.printContainer  { background-color: white;
+            display: -ms-flexbox; -ms-flex-direction: column;
+            -ms-flex-align: center; -ms-flex-pack: center;            
+            margin: 10px; padding: 10px; border: medium solid black;
+            text-align: center; height: 90%;}
+        .printContainer #imgElem {max-height: 90%;}
+        .printContainer #imgTitle { font-size: 30pt; color: black; }
+    </style>
+    <script>
+        WinJS.UI.Pages.define("/pages/printView.html", {
+            ready: function (element, details) {
+
+                imgElem.src = URL.createObjectURL(details.item.data.file);
+                imgTitle.innerText = details.item.data.file.displayName;
+
+                details.event.setSource(MSApp.getHtmlPrintDocumentSource(document));
+                details.deferral.complete();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="imgContainer" class="printContainer">
+        <img id="imgElem" />
+        <span id="imgTitle"></span>
+    </div>
+</body>
+</html>

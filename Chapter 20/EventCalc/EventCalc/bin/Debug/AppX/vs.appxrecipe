@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TINY</Machine>
+    <WindowsUser>adam</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>2640ACD08C509864C0715E9BCD147FA47876E4C01B690A49C76413FD5DCFC421</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>a52d9e6e-bba3-4774-a824-b26e77499de7_1.0.0.0_neutral__6fxp0bkxjs8ye</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>a52d9e6e-bba3-4774-a824-b26e77499de7_6fxp0bkxjs8ye!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>a52d9e6e-bba3-4774-a824-b26e77499de7</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=adam</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-11T09:28:39.732</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\colorsSettings.html">
+      <PackagePath>colorsSettings.html</PackagePath>
+      <Modified>2012-09-11T07:34:28.238</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-09-11T08:34:02.057</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\historySettings.html">
+      <PackagePath>historySettings.html</PackagePath>
+      <Modified>2012-09-11T07:34:23.098</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\data\calcData.json">
+      <PackagePath>data\calcData.json</PackagePath>
+      <Modified>2012-07-24T17:54:09.253</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\js\appDataFiles.js">
+      <PackagePath>js\appDataFiles.js</PackagePath>
+      <Modified>2012-09-11T09:27:48.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-09-11T09:28:39.268</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\js\settings.js">
+      <PackagePath>js\settings.js</PackagePath>
+      <Modified>2012-09-11T08:30:08.656</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\js\tasks.js">
+      <PackagePath>js\tasks.js</PackagePath>
+      <Modified>2012-09-10T06:59:54.661</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\js\viewmodel.js">
+      <PackagePath>js\viewmodel.js</PackagePath>
+      <Modified>2012-09-10T06:47:43.145</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-09-08T15:49:33.883</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 20\EventCalc\EventCalc\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-09-11T09:28:39.650</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.8514.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

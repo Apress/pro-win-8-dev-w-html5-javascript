@@ -1,0 +1,31 @@
+﻿@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}
+
+@media screen and (-ms-view-state: filled) {
+    #topLeft {
+        -ms-grid-column-span: 2;
+    }
+
+    #topRight {
+        -ms-grid-row:  2;
+    }
+    
+    #bottomRight {
+        display: none;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    #gridContainer {
+        -ms-grid-columns: 1fr;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    #topLeft {
+        background-color: #eca7a7;
+    }
+}

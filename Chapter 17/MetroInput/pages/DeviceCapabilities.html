@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var input = Windows.Devices.Input;
+
+        WinJS.UI.Pages.define("/pages/DeviceCapabilities.html", {
+            ready: function () {
+                var kbd = new input.KeyboardCapabilities();
+                generateCapabilityPanel("Keyboard", [{
+                    name: "Keyboard Present", value: kbd.keyboardPresent == 1
+                }]);
+
+                var mouse = new input.MouseCapabilities();
+                generateCapabilityPanel("Mouse", [
+                    { name: "Mouse Present", value: mouse.mousePresent == 1},
+                    { name: "Buttons", value: mouse.numberOfButtons },
+                    { name: "Butttons Swapped", value: mouse.swapButtons == 1},
+                    { name: "Horizontal Wheel", value: mouse.horizontalWheelPresent == 1},
+                    { name: "Vertical Wheel", value: mouse.verticalWheelPresent == 1}
+                ]);
+
+                var touch = new input.TouchCapabilities();
+                generateCapabilityPanel("Touch", [
+                    { name: "Touch Present", value: touch.touchPresent == 1},
+                    { name: "Contacts", value: touch.contacts }
+                ]);
+            }
+        });
+
+        function generateCapabilityPanel(name, capabilities) {
+            panelTemplate.winControl.render({section: name}).then(function (panelElem) {
+                WinJS.Utilities.addClass(panelElem, "panel");
+                capabilities.forEach(function (capability) {
+                    capabilityTemplate.winControl.render(capability)
+                    .then(function (capabilityTemplate) {
+                        WinJS.Utilities.addClass(capabilityTemplate, "capability");
+                        panelElem.appendChild(capabilityTemplate);
+                    });
+                });
+                capabilitiesContainer.appendChild(panelElem);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="panelTemplate" data-win-control="WinJS.Binding.Template">
+        <h1 class="sectionHeader" data-win-bind="innerText: section"></h1>
+    </div>
+
+    <div id="capabilityTemplate" data-win-control="WinJS.Binding.Template">
+        <h2 class="capabilityTitle" data-win-bind="innerText: name"></h2>:
+        <span class="capabilityResult" data-win-bind="innerText: value"></span>
+    </div>
+
+    <div id="capabilitiesContainer" class="container"></div>
+</body>
+</html>

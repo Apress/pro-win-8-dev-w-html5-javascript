@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TINY</Machine>
+    <WindowsUser>adam</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>6D9DECDA8600415C757BFA192A7CA0FD0F65A1FF8AC3C22D0AFEFF35635EB8FD</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>e39d7954-bfbd-477a-8de1-a8d846a45eb3_1.0.0.0_neutral__6fxp0bkxjs8ye</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>e39d7954-bfbd-477a-8de1-a8d846a45eb3_6fxp0bkxjs8ye!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>e39d7954-bfbd-477a-8de1-a8d846a45eb3</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=adam</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-30T16:40:05.602</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-08-27T19:44:35.752</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\AppTest.html">
+      <PackagePath>pages\AppTest.html</PackagePath>
+      <Modified>2012-08-27T19:09:10.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\DatePicker.html">
+      <PackagePath>pages\DatePicker.html</PackagePath>
+      <Modified>2012-08-29T16:37:33.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\Flyout.html">
+      <PackagePath>pages\Flyout.html</PackagePath>
+      <Modified>2012-08-29T15:49:30.501</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\Menu.html">
+      <PackagePath>pages\Menu.html</PackagePath>
+      <Modified>2012-08-30T13:15:11.052</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\MessageDialog.html">
+      <PackagePath>pages\MessageDialog.html</PackagePath>
+      <Modified>2012-08-30T22:47:06.674</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\Rating.html">
+      <PackagePath>pages\Rating.html</PackagePath>
+      <Modified>2012-08-28T17:00:04.388</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\TimePicker.html">
+      <PackagePath>pages\TimePicker.html</PackagePath>
+      <Modified>2012-08-29T08:09:26.703</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\ToggleSwitch.html">
+      <PackagePath>pages\ToggleSwitch.html</PackagePath>
+      <Modified>2012-08-28T08:50:07.991</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\pages\Tooltip.html">
+      <PackagePath>pages\Tooltip.html</PackagePath>
+      <Modified>2012-08-28T17:01:32.417</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\images\apple.png">
+      <PackagePath>images\apple.png</PackagePath>
+      <Modified>2011-09-13T08:48:36.023</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\js\controls.js">
+      <PackagePath>js\controls.js</PackagePath>
+      <Modified>2012-08-30T16:54:50.055</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-08-28T19:24:44.113</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\js\templates.js">
+      <PackagePath>js\templates.js</PackagePath>
+      <Modified>2012-08-31T07:03:04.350</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\js\viewmodel.js">
+      <PackagePath>js\viewmodel.js</PackagePath>
+      <Modified>2012-08-29T19:34:40.724</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-08-28T07:20:12.938</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 13\UIControls\UIControls\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-08-30T16:40:05.518</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.8514.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

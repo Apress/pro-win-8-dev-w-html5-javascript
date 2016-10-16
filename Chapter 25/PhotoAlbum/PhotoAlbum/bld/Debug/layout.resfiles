@@ -1,0 +1,15 @@
+css\default.css
+default.html
+images\jpgLogo.png
+images\logo.png
+images\pngLogo.png
+images\small.png
+images\splashscreen.png
+images\storelogo.png
+js\app.js
+js\default.js
+js\setup.js
+pages\albumView.html
+pages\openPickerView.html
+pages\savePickerView.html
+pages\shareTargetView.html

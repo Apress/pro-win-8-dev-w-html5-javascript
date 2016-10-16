@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TINY</Machine>
+    <WindowsUser>adam</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>90D83E3718A4CC336BA6A0128377179821D2DB7B107DDF8778F0E27E49B33E33</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>1ad06b9e-6792-4440-a9fe-133d14c8767f_1.0.0.0_neutral__6fxp0bkxjs8ye</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>1ad06b9e-6792-4440-a9fe-133d14c8767f_6fxp0bkxjs8ye!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>1ad06b9e-6792-4440-a9fe-133d14c8767f</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=adam</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-13T10:56:33.034</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-09-12T16:42:43.668</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\pages\albumView.html">
+      <PackagePath>pages\albumView.html</PackagePath>
+      <Modified>2012-09-13T10:56:30.630</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\pages\autoPlayView.html">
+      <PackagePath>pages\autoPlayView.html</PackagePath>
+      <Modified>2012-09-13T09:41:24.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\pages\openPickerView.html">
+      <PackagePath>pages\openPickerView.html</PackagePath>
+      <Modified>2012-09-12T20:04:07.598</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\pages\printView.html">
+      <PackagePath>pages\printView.html</PackagePath>
+      <Modified>2012-09-13T10:56:25.834</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\pages\savePickerView.html">
+      <PackagePath>pages\savePickerView.html</PackagePath>
+      <Modified>2012-09-12T19:53:44.832</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\pages\shareTargetView.html">
+      <PackagePath>pages\shareTargetView.html</PackagePath>
+      <Modified>2012-09-13T09:07:58.581</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\images\jpgLogo.png">
+      <PackagePath>images\jpgLogo.png</PackagePath>
+      <Modified>2012-08-08T17:56:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-08T17:48:03.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\images\pngLogo.png">
+      <PackagePath>images\pngLogo.png</PackagePath>
+      <Modified>2012-08-08T17:52:45.865</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\images\small.png">
+      <PackagePath>images\small.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-12T17:22:32.557</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-08T17:49:27.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-08-08T17:50:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\js\app.js">
+      <PackagePath>js\app.js</PackagePath>
+      <Modified>2012-09-13T10:53:35.912</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-09-13T10:05:28.383</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\js\setup.js">
+      <PackagePath>js\setup.js</PackagePath>
+      <Modified>2012-09-12T16:47:53.629</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-09-12T16:45:56.443</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 26\PhotoAlbum\PhotoAlbum\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-09-13T10:56:32.946</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.8514.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

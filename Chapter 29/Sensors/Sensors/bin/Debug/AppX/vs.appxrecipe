@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TINY</Machine>
+    <WindowsUser>adam</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>03BD9C43C36EC099C3D0D43178E0F33280695C68B73D92360EB0CDC56069C18C</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>fc7d2a5a-c10e-426e-9f66-fdf2764796db_1.0.0.0_neutral__6fxp0bkxjs8ye</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>fc7d2a5a-c10e-426e-9f66-fdf2764796db_6fxp0bkxjs8ye!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>fc7d2a5a-c10e-426e-9f66-fdf2764796db</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=adam</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-17T21:26:21.646</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-09-17T22:05:19.278</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\pages\acceleration.html">
+      <PackagePath>pages\acceleration.html</PackagePath>
+      <Modified>2012-09-17T20:22:46.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\pages\direction.html">
+      <PackagePath>pages\direction.html</PackagePath>
+      <Modified>2012-09-17T21:57:11.909</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\pages\geolocation.html">
+      <PackagePath>pages\geolocation.html</PackagePath>
+      <Modified>2012-09-17T10:56:33.325</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\pages\light.html">
+      <PackagePath>pages\light.html</PackagePath>
+      <Modified>2012-09-17T22:12:07.021</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\pages\tilt.html">
+      <PackagePath>pages\tilt.html</PackagePath>
+      <Modified>2012-09-17T17:57:58.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-09-17T10:55:44.653</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\pages\geolocation.js">
+      <PackagePath>pages\geolocation.js</PackagePath>
+      <Modified>2012-09-17T10:56:19.262</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-09-17T21:39:37.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adam\Documents\Books\Pro Win8 Dev\Source Code\Chapter 29\Sensors\Sensors\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-09-17T21:26:21.546</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.8514.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

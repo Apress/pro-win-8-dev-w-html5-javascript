@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {background-color: #303030;}
+        #shareListView {
+            width: 90%; height: 275px; border: medium solid white;
+            margin: 20px 10px;}
+        .addButton { font-size: 18pt; margin: 10px; width: 175px}
+        .titleSmall { font-size: 20pt;}
+    </style>
+    <script>
+        var storage = Windows.Storage;
+        var share = Windows.ApplicationModel.DataTransfer;
+        var localFolder = storage.ApplicationData.current.localFolder;
+
+        function processPackage(data) {
+            if (data.contains(share.StandardDataFormats.storageItems)) {
+                return data.getStorageItemsAsync().then(function (files) {
+                    var fileList = new WinJS.Binding.List();
+                    files.forEach(function (file) {
+                        if (file.fileType == ".jpg" || file.fileType == ".png") {
+                            fileList.unshift({
+                                img: URL.createObjectURL(file),
+                                title: file.displayName,
+                                file: file
+                            });
+                        }
+                    });
+                    appName.innerText = data.properties.applicationName;
+                    shareTitle.innerText = data.properties.title;
+                    var refLink = data.properties["referenceURL"]
+                    infoAnchor.innerText = infoAnchor.href = refLink == null ? "N/A" : refLink;
+                    return fileList;
+                });
+            };
+        }
+
+        function copySelectedFiles(files) {
+            var promises = [];
+            files.forEach(function (file) {;
+                var promise = localFolder.createFileAsync(file.name,
+                    storage.CreationCollisionOption.replaceExisting)
+                    .then(function (newfile) {
+                        return file.copyAndReplaceAsync(newfile).then(function () {
+                            App.processFile(newfile);
+                        });
+                    });
+                promises.push(promise);
+            });
+            return WinJS.Promise.join(promises)
+        }
+
+        WinJS.UI.Pages.define("/pages/shareTargetView.html", {
+            ready: function (element, shareOperation) {
+
+                processPackage(shareOperation.data).then(function (list) {
+                    if (list.length == 0) {
+                        shareOperation.reportError("No images files were shared");
+                        return;
+                    } else if (shareOperation.quickLinkId == "all") {
+                        shareOperation.reportStarted();
+                        var files = [];
+                        list.forEach(function (listItem) {
+                            files.push(listItem.file);
+                        });
+                        copySelectedFiles(files).then(function () {
+                            shareOperation.reportDataRetrieved();
+                            shareOperation.reportCompleted();
+                        });
+                    } else {
+
+                        shareOperation.reportStarted();
+
+                        shareListView.winControl.itemDataSource = list.dataSource;
+
+                        WinJS.Utilities.query("button.addButton").listen("click", function (e) {
+
+                            if (this.id == "addAll") {
+                                shareListView.winControl.selection.selectAll();
+                            }
+                            var filesToProcess = [];
+                            shareListView.winControl.selection.getItems()
+                                .then(function (items) {
+                                    items.forEach(function (item) {
+                                        filesToProcess.push(item.data.file);
+                                    });
+                                });
+
+                            copySelectedFiles(filesToProcess).then(function () {
+                                shareOperation.reportDataRetrieved();
+
+                                if (e.target.id == "addAll") {
+                                    var qlink = new share.ShareTarget.QuickLink();
+                                    qlink.id = "all";
+                                    qlink.supportedFileTypes.replaceAll([".png", ".jpg"]);
+                                    qlink.title = "Add all files";
+                                    qlink.thumbnail = storage.Streams.RandomAccessStreamReference.
+                                        createFromUri(Windows.Foundation.Uri("ms-appx:///images/logo.png"));
+                                    shareOperation.reportCompleted(qlink);
+
+                                } else {
+                                    shareOperation.reportCompleted();
+                                }
+                            });
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="title" id="shareTitle"></div>
+    <div class="titleSmall">Shared by: <span id="appName"></span></div>
+    <div class="titleSmall">(For info: <a id="infoAnchor"></a>)</div>
+    <div id="shareListView" data-win-control="WinJS.UI.ListView" 
+        data-win-options="{
+            itemTemplate: imageTemplate,
+            tapBehavior: WinJS.UI.TapBehavior.directSelect,
+            maxRows: 1
+        }">
+    </div>
+    <div>
+        <button class="addButton" id="addAll">Add All</button>
+        <button class="addButton" id="addSelected">Add Selected</button>
+    </div>
+</body>
+</html>

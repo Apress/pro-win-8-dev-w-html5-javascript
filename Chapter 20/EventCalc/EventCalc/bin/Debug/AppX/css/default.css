@@ -1,0 +1,40 @@
+﻿body {
+ display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;
+}
+
+div.container {
+    width: 30%;
+    display: inline-block;
+    margin: 0 20px;    
+    text-align: center;    
+    font-size: 35pt;
+}
+
+#eventList, #historyList, #calcElems {
+    border: thin solid white;
+    height: 85%;
+    padding-top: 20px;    
+}
+
+#calcButton {
+    font-size: 20pt;
+    margin: 20px;
+}
+
+#calcContainer input {
+    font-size: 25pt;
+    width: 100px;
+}
+
+*.calcSymbol, #result {
+    font-size: 35pt;
+}
+
+.message {
+    font-size: 20pt;
+    margin: 5px;
+    text-align: left;
+}

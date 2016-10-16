@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #pickerImgElem {display: none}
+    </style>
+    <script>
+        var $ = WinJS.Utilities.query;
+        var storage = Windows.Storage;
+        var search = Windows.Storage.Search;
+        var pickers = Windows.Storage.Pickers;
+
+        var loadedFile = null;
+
+        WinJS.UI.Pages.define("/pages/pickers.html", {
+            ready: function () {
+                $('.container button').listen("click", function (e) {
+                    if (this.id == "open") {
+                        var openPicker = Windows.Storage.Pickers.FileOpenPicker();
+                        openPicker.fileTypeFilter.push(".png", ".jpg");
+                        openPicker.suggestedStartLocation =
+                            pickers.PickerLocationId.picturesLibrary;
+                        openPicker.viewMode = pickers.PickerViewMode.thumbnail;
+                        openPicker.pickSingleFileAsync().then(function (pickedFile) {
+                            if (pickedFile != null) {
+                                loadedFile = pickedFile;
+                                pickerImgElem.style.display = "block";
+                                pickerImgElem.src = URL.createObjectURL(pickedFile);
+                                pickerTitleElem.innerText = pickedFile.displayName;
+                                save.disabled = false;
+                            } else {
+                                pickerImgElem.style.display = "none";
+                                pickerTitleElem.innerText = "No file selected";
+                            }
+                        });
+                    } else if (this.id == "save") {
+                        var savePicker = Windows.Storage.Pickers.FileSavePicker();
+                        savePicker.defaultFileExtension = loadedFile.fileType;
+                        savePicker.fileTypeChoices.insert(loadedFile.displayType,
+                            [loadedFile.fileType]);
+                        savePicker.suggestedFileName = "New Image File";
+                        savePicker.suggestedStartLocation =
+                            pickers.PickerLocationId.documentsLibrary;
+                        savePicker.pickSaveFileAsync().then(function (saveFile) {
+                            if (saveFile) {
+                                loadedFile.copyAndReplaceAsync(saveFile).then(function () {
+                                    pickerImgElem.style.display = "none";
+                                    pickerTitleElem.innerText = "Saved: " + saveFile.name;
+                                });
+                            }
+                        });
+                    } else {
+                        var folderPicker = Windows.Storage.Pickers.FolderPicker();
+                        folderPicker.suggestedStartLocation =
+                            pickers.PickerLocationId.picturesLibrary;
+                        folderPicker.fileTypeFilter.push("*");
+                        folderPicker.pickSingleFolderAsync().then(function (selectedFolder) {
+                            if (selectedFolder != null) {
+                                selectedFolder.getFilesAsync().then(function (files) {
+                                    files[0].getThumbnailAsync(
+                                        storage.FileProperties.ThumbnailMode.singleItem, 500)
+                                    .then(function (thumb) {
+                                        pickerImgElem.style.display = "block";
+                                        pickerImgElem.src = URL.createObjectURL(thumb);
+                                        pickerTitleElem.innerText = files[0].displayName;
+                                    });
+                                });
+                            }
+                        });
+                    }
+
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button id="open">Open File Picker</button>
+        <button id="save" disabled>Save File Picker</button>
+        <button id="folder">Folder Picker</button>
+    </div>
+    <div class="container">
+        <img id="pickerImgElem" class="imgElem" />
+        <div id="pickerTitleElem" class="imgTitle">Select an image file</div>
+    </div>
+</body>
+</html>

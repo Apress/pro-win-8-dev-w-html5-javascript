@@ -1,0 +1,50 @@
+﻿body {
+    background-color: #5A8463;
+    color: white;       
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: center; -ms-flex-pack: center;
+}
+
+div.container {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center; -ms-flex-pack: center;
+}
+
+div.panel {
+    width: 25%; border: thick solid white;
+    margin: 10px; padding: 10px; font-size: 14pt;    
+    height: 500px; width: 350px;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: center; -ms-flex-pack: center;
+}
+
+#left > div {
+    margin: 10px 0;
+}
+
+#left input {
+    font-size: 14pt; width: 200px;
+}
+
+div.panel label {
+    display: inline-block; width: 100px; text-align: right;
+}
+
+div.panel span {
+    display: inline-block; width: 200px;    
+}
+
+#messages {
+    width: 80%; height: 250px; padding: 10px; border: thin solid white;
+}
+
+#middle, #right {
+    font-size: 20pt;
+}
+
+#middle label, #right label {
+    color: darkgray; margin-left: 10px;
+}

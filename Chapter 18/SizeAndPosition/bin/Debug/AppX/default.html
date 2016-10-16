@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SizeAndPosition</title>
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <style>
+        body { background-color: #5A8463; }
+        #container { margin: 20px; display: -ms-grid;
+             -ms-grid-columns: 0.1fr 0.25fr 1fr 0.55fr;
+             -ms-grid-rows: 0.2fr 0.5fr 1fr 0.1fr;}
+        #content {
+            -ms-grid-row: 2; -ms-grid-row-span: 2; -ms-grid-column: 3;
+            font-size: 30pt; padding: 20px; margin: 20px;
+            border: thick solid white; text-align: center;}
+        #logMessages {
+            font-size: 30pt; text-align: center;
+        }
+    </style>
+    <script>
+
+        function logSizeAndPos(msg) {
+            if (WinJS.log) {
+                WinJS.log(msg, "winjs app info", "info");
+            }
+        }
+
+        WinJS.Utilities.startLog({ type: "info", tags: "app bugs info" });
+
+        WinJS.Utilities.startLog({
+            type: "info", tags: "app",
+            action: function (msg, tags, type) {
+                if (msg.indexOf("Position") == 0) {
+                    var fMsg = WinJS.Utilities.formatLog(msg, tags, type);
+                    var newElem = document.createElement("div");
+                    newElem.innerText = fMsg;
+                    logMessages.appendChild(newElem);
+                }
+            }
+        });
+
+        WinJS.Application.onactivated = function () {
+
+            var elem = document.getElementById("content");
+
+            logSizeAndPos("Content Height: " + WinJS.Utilities.getContentHeight(elem));
+            logSizeAndPos("Content Width: " + WinJS.Utilities.getContentWidth(elem));
+            logSizeAndPos("Total Width: " + WinJS.Utilities.getTotalWidth(elem));
+            logSizeAndPos("Total Height: " + WinJS.Utilities.getTotalHeight(elem));
+
+            var position = WinJS.Utilities.getPosition(elem);
+            logSizeAndPos("Position Top: " + position.top);
+            logSizeAndPos("Position Left: " + position.left);
+            logSizeAndPos("Position Width: " + position.width);
+            logSizeAndPos("Position Height: " + position.height);
+
+            var parent = document.getElementById("container");
+            logSizeAndPos("Rel Left: " + WinJS.Utilities.getRelativeLeft(elem, parent));
+            logSizeAndPos("Rel Top: " + WinJS.Utilities.getRelativeTop(elem, parent));
+        };
+        WinJS.Application.start();
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content">Here is some content</div>
+    </div>
+    <div id="logMessages"></div>    
+</body>
+</html>

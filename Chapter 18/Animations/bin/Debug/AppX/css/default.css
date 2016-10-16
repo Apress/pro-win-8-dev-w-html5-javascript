@@ -1,0 +1,45 @@
+﻿body {
+    background-color: #5A8463;
+}
+
+.column {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;    
+}
+
+div.panel {
+    border: medium white solid;
+    margin: 10px;
+    padding: 20px;    
+}
+
+.outerContainer {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: stretch;
+    -ms-flex-pack: center;    
+}
+
+.coloredRect {
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    font-size: 40pt;
+    text-align: center; 
+}
+
+.coloredRectSmall {
+    width: 200px;
+    height: 200px;
+}
+
+.buttonPanel button {
+    width: 200px;
+    font-size: 20pt;
+    margin: 20px;
+    height: 85px;       
+}

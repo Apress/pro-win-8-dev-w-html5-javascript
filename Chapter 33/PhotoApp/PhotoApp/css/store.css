@@ -1,0 +1,31 @@
+﻿.title {
+    font-size: 20pt;
+    text-align: center;
+}
+
+#productContainer {
+    display: -ms-grid;
+}
+
+.pname, .pprice, .pbuy, .purchased {
+    margin: 10px;
+}
+
+.pname {
+    -ms-grid-column: 1;
+}
+
+.pprice {
+    -ms-grid-column: 2;
+    text-align: right;
+}
+
+.pbuy, .purchased {
+    text-align: center;
+    -ms-grid-column: 3;
+}
+
+#cancelContainer {
+    text-align: center
+}
+

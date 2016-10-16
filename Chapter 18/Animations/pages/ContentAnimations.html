@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/ContentAnimations.html", {
+            ready: function () {
+
+                content2.style.display = "none";
+                fade2.style.opacity = 0;
+                crossfade2.style.opacity = 0;
+             
+                $('button').listen("click", function (e) {
+                    switch (e.target.id) {
+                        case "content":
+                            var visible = content1.style.display
+                                == "none" ? content2 : content1;
+                            var hidden = visible == content1 ? content2 : content1;
+
+                            WinJS.UI.Animation.exitContent(visible).then(function () {
+                                visible.style.display = "none";
+                                hidden.style.display = "";
+                                WinJS.UI.Animation.enterContent(hidden);
+                            });
+                            break;
+                        case "fade":
+                            var visible = fade1.style.opacity  == "0" ? fade2 : fade1;
+                            var hidden = visible == fade1? fade2: fade1;
+
+                            WinJS.UI.Animation.fadeOut(visible).then(function () {
+                                WinJS.UI.Animation.fadeIn(hidden);
+                            });
+                            break;
+                        case "crossfade":
+                            var visible = crossfade1.style.opacity == "0" ? crossfade2 : crossfade1;
+                            var hidden = visible == crossfade1 ? crossfade2 : crossfade1;
+
+                            WinJS.UI.Animation.crossFade(hidden, visible);
+                            break;
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="outerContainer">
+        <div class="panel">
+            <div id="content1" class="coloredRect coloredRectSmall column">One</div>
+            <div id="content2"class="coloredRect coloredRectSmall column">Two</div>
+            <div class="buttonPanel column">
+                <button id="content">Enter/Exit Content</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div style="display: -ms-grid">
+                <div id="fade1" class="coloredRect coloredRectSmall column">One</div>
+                <div id="fade2" class="coloredRect coloredRectSmall column">Two</div>
+            </div>
+            <div class="buttonPanel column">
+                <button id="fade">Fade In/Out</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div style="display: -ms-grid">
+                <div id="crossfade1" 
+                    class="coloredRect coloredRectSmall column">One</div>
+                <div id="crossfade2" 
+                    class="coloredRect coloredRectSmall column">Two</div>
+            </div>
+            <div class="buttonPanel column">
+                <button id="crossfade">Cross Fade</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

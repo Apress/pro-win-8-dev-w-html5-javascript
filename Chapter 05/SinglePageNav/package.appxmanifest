@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="2d09309b-179a-4199-85c4-7d21daba27dd" Version="1.0.0.0" Publisher="CN=adam" />
+  <Properties>
+    <DisplayName>SinglePageNav</DisplayName>
+    <Description>SinglePageNav</Description>
+    <PublisherDisplayName>adam</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="SinglePageNav" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="SinglePageNav" ForegroundText="light" BackgroundColor="#000000">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="images\splashscreen.png" />
+      </VisualElements>
+      <ApplicationContentUriRules>
+        <Rule Match="http://titan/content/customContent.html" Type="include" />
+      </ApplicationContentUriRules>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="privateNetworkClientServer" />
+  </Capabilities>
+</Package>

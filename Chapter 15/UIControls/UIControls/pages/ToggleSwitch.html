@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/toggleSwitch.html", {
+            ready: function () {
+                Templates.createControls(rightPanel, mainToggle, "toggleSwitch")
+                    .then(function () {
+                        mainToggle.addEventListener("change", function () {
+                            checked.winControl.checked = mainToggle.winControl.checked;
+                        });
+                    });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="toggleSwitchContainer" class="flexContainer">
+
+        <div class="controlPanel">
+            <div id="mainToggle" data-win-control="WinJS.UI.ToggleSwitch"
+                data-win-options="{title:'This is a ToggleSwitch:'}"></div>
+        </div>
+
+        <div id="rightPanel" class="controlPanel">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/css/semanticzoom.css" rel="stylesheet">
+    <link href="/css/listcontext.css" rel="stylesheet">
+    <script src="/js/pages/listcontext.js"></script>
+</head>
+<body>
+    <div id="contextZoomedInItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="zoomedInListItem">
+            <div class="zoomedInListData" data-win-bind="innerText: name"></div>
+        </div>
+    </div>
+
+    <div id="contextZoomedOutItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="contextListItem">
+            <div class="contextListData" data-win-bind="innerText: firstLetter"></div>
+        </div>
+    </div>
+
+    <div id="contextGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div>Letter: <span data-win-bind="innerText: firstLetter"></span></div>
+    </div>
+
+    <div id="contextContainer">
+        <div id="zoomedOut" data-win-control="WinJS.UI.ListView"
+            data-win-options="{
+                itemDataSource: ViewModel.data.groupedNames.groups.dataSource,
+                itemTemplate: contextZoomedOutItemTemplate,
+                layout: {type: WinJS.UI.ListLayout}}">
+        </div>
+
+        <div id="zoomedIn" data-win-control="WinJS.UI.ListView"
+            data-win-options="{
+                itemDataSource: ViewModel.data.groupedNames.dataSource,
+                groupDataSource: ViewModel.data.groupedNames.groups.dataSource,
+                itemTemplate: contextZoomedInItemTemplate,
+                groupHeaderTemplate: contextGroupHeaderTemplate}">
+        </div>
+    </div>
+</body>
+</html>

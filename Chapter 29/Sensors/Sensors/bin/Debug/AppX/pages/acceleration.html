@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        WinJS.UI.Pages.define("/pages/acceleration.html", {
+            ready: function () {
+                var sensor = Windows.Devices.Sensors.Accelerometer.getDefault();
+                if (sensor == null) {
+                    WinJS.Utilities.query(".label").setStyle("display", "none");
+                    WinJS.Utilities.query(".warning").setStyle("display", "block");
+                } else {
+                    displaySensorReading(sensor.getCurrentReading());
+                    sensor.addEventListener("readingchanged", function (e) {
+                        displaySensorReading(e.reading);
+                    });
+                }
+            }
+        });
+
+        function displaySensorReading(reading) {
+            x.innerText = reading.accelerationX.toFixed(2);
+            y.innerText = reading.accelerationY.toFixed(2);
+            z.innerText = reading.accelerationZ.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="label warning">No Accelerometer Installed</h1>
+        <h1 class="label">Accelerate X: <span id="x">(None)</span></h1>
+        <h1 class="label">Accelerate Y: <span id="y">(None)</span></h1>
+        <h1 class="label">Accelerate Z: <span id="z">(None)</span></h1>
+    </div>
+</body>
+</html>

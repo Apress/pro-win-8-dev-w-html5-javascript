@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+<script>
+    var view = Windows.UI.ViewManagement;
+
+    function setButtonContent(viewState) {
+        if (viewState == view.ApplicationViewState.snapped) {
+            button1.innerText = "Change View";
+        } else {
+            button1.innerText = "Button One";
+        }
+    }
+
+    WinJS.UI.Pages.define("/content.html", {
+        ready: function () {
+            setButtonContent(view.ApplicationView.value);
+
+            window.addEventListener("resize", function () {
+                setButtonContent(view.ApplicationView.value);
+            });
+
+            button1.addEventListener("click", function (e) {
+                var unsnapped = view.ApplicationView.tryUnsnap();
+                button1.innerText = unsnapped ? "Unsnapped" : "Failed";
+            });
+        }
+    });
+</script>
+        <style type="text/css">
+            button {
+                font-size: 30px;
+            }
+            @media screen and (-ms-view-state: snapped) {
+                #button1 {
+                    font-size: 40px;
+                    font-family: serif;
+                }
+                #button2 {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button id="button1">Button One</button>
+            <button id="button2">Button Two</button>
+        </div>
+    </body>
+</html>

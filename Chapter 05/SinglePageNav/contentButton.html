@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Content</title>
+        <script>
+            WinJS.UI.Pages.define("contentButton.html", {
+                ready: function (element, data) {
+                    document.getElementById("contentButton")
+                        .addEventListener("click", function (e) {
+                            WinJS.Navigation.navigate("basic");
+                        });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="contentButtonTop">
+            <div class="message">
+                <button id="contentButton">Press Me</button>
+            </div>
+        </div>
+    </body>
+</html>

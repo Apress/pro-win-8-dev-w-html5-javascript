@@ -1,0 +1,82 @@
+﻿body {
+    background-color: #5A8463;
+    display: -ms-flexbox; 
+    -ms-flex-direction: column;
+    -ms-flex-align: center; 
+    -ms-flex-pack: center;      
+}
+
+.inputContainer, .selectContainer, .spanContainer {
+    width: 100%;
+}
+
+h2.controlTitle {
+    margin: 10px 0px; color: white;
+    font-size: 20px; display: inline-block;
+    padding: 10px; font-weight: bolder;
+    width: 140px;
+}
+
+.controlPanel .win-toggleswitch {
+    width: 90%;
+    margin: 15px;
+    padding-left: 20px;
+}
+
+.win-toggleswitch .win-title {
+    color: white;
+    font-size: 20px;
+}
+
+div.flexContainer {
+    display: -ms-flexbox; 
+    -ms-flex-direction: row;
+    -ms-flex-align: stretch; 
+    -ms-flex-pack: center;      
+}
+
+.controlPanel {
+    display: -ms-flexbox; 
+    -ms-flex-direction: column;
+    -ms-flex-align: center; 
+    -ms-flex-pack: center;    
+    border: medium white solid;
+    margin: 10px;
+    padding: 20px;      
+    min-width: 300px;
+}
+
+ [data-win-control="WinJS.UI.ToggleSwitch"] {
+    border: thin solid white;
+    margin: 5px;
+    padding: 10px;    
+    width: 250px;
+}
+
+input.controlInput, select.controlSelect, span.controlSpan  {
+    width: 150px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+span.controlSpan {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14pt;
+}
+
+div.buttonContainer button {
+    margin: 5px;
+    font-size: 16pt;    
+}
+
+.textPara { display: inline-block; width: 200px; font-size: 18pt;}
+
+
+.win-tooltip {
+    background-color: #8ED09C; 
+    color: white; 
+    border: medium solid white;
+    font-size: 16pt;    
+}

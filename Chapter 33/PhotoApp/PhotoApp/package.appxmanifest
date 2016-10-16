@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="58477AdamFreeman.SimplePhotoAlbum" Version="1.0.0.3" Publisher="CN=18DE949A-E10D-4E8A-A30A-50757DF85632" />
+  <Properties>
+    <DisplayName>Simple Photo Album</DisplayName>
+    <PublisherDisplayName>Adam Freeman</PublisherDisplayName>
+    <Logo>images\store50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Simple Photo Album" Logo="images\tile150.png" SmallLogo="images\tile30.png" Description="PhotoApp" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" WideLogo="images\tile310.png" />
+        <SplashScreen Image="images\tile620.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+  </Capabilities>
+</Package>

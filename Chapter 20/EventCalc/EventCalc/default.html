@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EventCalc</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- EventCalc references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/viewmodel.js"></script>
+    <script src="/js/tasks.js"></script>
+    <script src="/js/settings.js"></script>
+    <script src="/js/appDataFiles.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body data-win-bind="style.backgroundColor: backgroundColor; style.color: textColor">
+    <div id="template" data-win-control="WinJS.Binding.Template">
+        <div class="message" data-win-bind="innerText: message"></div>
+    </div>
+
+    <div id="eventContainer" class="container">
+        <span>Events</span>
+        <div id="eventList" data-win-control="WinJS.UI.ListView" 
+            data-win-options="{itemTemplate: template, 
+                itemDataSource: ViewModel.State.eventLog.dataSource,
+                layout: {type: WinJS.UI.ListLayout}}">
+        </div>
+    </div>
+
+    <div id="calcContainer" class="container">
+        <span>Calculator</span>
+        <div id="calcElems">
+            <input id="firstInput" data-win-bind="innerText: firstNumber 
+                ViewModel.Converters.calcNumber" />
+            <span class="calcSymbol">+</span>
+            <input id="secondInput" data-win-bind="innerText: secondNumber 
+                ViewModel.Converters.calcNumber" />
+            <span class="calcSymbol">=</span>
+            <span id="result" data-win-bind="innerText: result 
+                ViewModel.Converters.calcResult"></span>
+            <button id="calcButton">Calculate</button>
+        </div>
+    </div>
+
+    <div id="historyContainer" class="container"
+            data-win-bind="style.display: showHistory ViewModel.Converters.display">
+        <span>History</span>
+        <div id="historyList" data-win-control="WinJS.UI.ListView" 
+            data-win-options="{itemTemplate: template, 
+                itemDataSource: ViewModel.State.history.dataSource,
+                layout: {type: WinJS.UI.ListLayout}}">
+        </div>
+    </div>
+</body>
+</html>
